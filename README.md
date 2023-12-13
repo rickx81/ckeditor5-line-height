@@ -7,17 +7,17 @@ The line height plugin for ckeditor5.
 First, install the build from npm:
 
 ```bash
-pnpm i @rick81/ckeditor5-line-height
+pnpm i @rickx/ckeditor5-line-height
 
-yarn add @rick81/ckeditor5-line-height
+yarn add @rickx/ckeditor5-line-height
 
-npm i @rick81/ckeditor5-line-height
+npm i @rickx/ckeditor5-line-height
 ```
 
 Use it in your application:
 
 ```js
-import LineHeight from '@rick81/ckeditor5-line-height'
+import { LineHeight } from '@rickx/ckeditor5-line-height'
 ```
 
 ## License
