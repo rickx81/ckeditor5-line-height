@@ -1,5 +1,4 @@
 import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import type { LineHeightOption } from './lineheightconfig';
 /**
  * The lineHeight command plugin.
  */
@@ -10,7 +9,7 @@ export default class LineHeightCommand extends Command {
      * @observable
      * @readonly
      */
-    value: string | number;
+    value: string;
     /**
      * @inheritDoc
      */
@@ -21,6 +20,7 @@ export default class LineHeightCommand extends Command {
      */
     refresh(): void;
     execute(options?: {
-        value?: LineHeightOption;
+        value?: string;
     }): void;
+    private _canSetLineHeight;
 }

@@ -1,4 +1,5 @@
 import { Command } from '@ckeditor/ckeditor5-core';
+import { first } from '@ckeditor/ckeditor5-utils';
 import { LINE_HEIGHT } from './utils';
 /**
  * The lineHeight command plugin.
@@ -18,32 +19,39 @@ export default class LineHeightCommand extends Command {
      */
     refresh() {
         const model = this.editor.model;
-        const doc = model.document;
-        this.value = doc.selection.getAttribute(LINE_HEIGHT);
-        this.isEnabled = model.schema.checkAttributeInSelection(doc.selection, LINE_HEIGHT);
+        const document = model.document;
+        const firstBlock = first(document.selection.getSelectedBlocks());
+        // As first check whether to enable or disable the command as the value will always be false if the command cannot be enabled.
+        this.isEnabled = !!firstBlock && this._canSetLineHeight(firstBlock);
+        this.value = (this.isEnabled && firstBlock.hasAttribute(LINE_HEIGHT))
+            ? firstBlock.getAttribute(LINE_HEIGHT)
+            : 'default';
     }
     execute(options = {}) {
         const editor = this.editor;
         const model = editor.model;
         const document = model.document;
-        const selection = document.selection;
         const value = options.value;
         model.change((writer) => {
-            if (selection.isCollapsed) {
-                if (value)
-                    writer.setSelectionAttribute(LINE_HEIGHT, value);
-                else
-                    writer.removeSelectionAttribute(LINE_HEIGHT);
-            }
-            else {
-                const ranges = model.schema.getValidRanges(selection.getRanges(), LINE_HEIGHT);
-                for (const range of ranges) {
-                    if (value)
-                        writer.setAttribute(LINE_HEIGHT, value, range);
-                    else
-                        writer.removeAttribute(LINE_HEIGHT, range);
-                }
-            }
+            const blocks = Array.from(document.selection.getSelectedBlocks())
+                .filter(block => this._canSetLineHeight(block));
+            const currentLineHeight = blocks[0].getAttribute(LINE_HEIGHT);
+            const removeLineHeight = currentLineHeight === value || !value;
+            if (removeLineHeight)
+                removeLineHeightFromSelection(blocks, writer);
+            else
+                setLineHeightOnSelection(blocks, writer, value);
         });
     }
+    _canSetLineHeight(block) {
+        return this.editor.model.schema.checkAttribute(block, LINE_HEIGHT);
+    }
+}
+function removeLineHeightFromSelection(blocks, writer) {
+    for (const block of blocks)
+        writer.removeAttribute(LINE_HEIGHT, block);
+}
+function setLineHeightOnSelection(blocks, writer, lineHeight) {
+    for (const block of blocks)
+        writer.setAttribute(LINE_HEIGHT, lineHeight, block);
 }

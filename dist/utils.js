@@ -22,10 +22,7 @@ function generatePreset(size) {
         view: {
             name: 'span',
             styles: {
-                // @ts-expect-error
-                // lineHeight: 1.5;
-                // lineHeight: 16px;
-                'line-height': size,
+                'line-height': sizeStr,
             },
             priority: 5,
         },
@@ -46,10 +43,13 @@ export function buildDefinition(modelAttributeKey, options) {
         upcastAlso: {},
     };
     for (const option of options) {
-        definition.model.values.push(option.model);
-        definition.view[option.model] = option.view;
-        if (option.upcastAlso)
-            definition.upcastAlso[option.model] = option.upcastAlso;
+        definition.model.values.push(option);
+        definition.view[option] = {
+            key: 'style',
+            value: {
+                'line-height': option,
+            },
+        };
     }
     return definition;
 }

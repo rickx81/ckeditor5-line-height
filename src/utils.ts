@@ -1,8 +1,7 @@
-import type {
-  MatcherPattern,
-  ViewElementDefinition,
-} from '@ckeditor/ckeditor5-engine'
-import type { ArrayOrItem } from '@ckeditor/ckeditor5-utils'
+import type { AttributeDescriptor } from '@ckeditor/ckeditor5-engine'
+import type { AttributeCreatorFunction } from '@ckeditor/ckeditor5-engine/src/conversion/downcasthelpers'
+
+import type { ArrayOrItem, PriorityString } from '@ckeditor/ckeditor5-utils'
 import type { LineHeightOption } from './lineheightconfig'
 
 /**
@@ -10,7 +9,7 @@ import type { LineHeightOption } from './lineheightconfig'
  */
 export const LINE_HEIGHT = 'lineHeight'
 
-function getOptionDefinition(option: number | string | LineHeightOption) {
+function getOptionDefinition(option: number | string): LineHeightOption {
   if (typeof option === 'object')
     return option
 
@@ -34,19 +33,14 @@ function generatePreset(size: number | string): LineHeightOption {
     view: {
       name: 'span',
       styles: {
-        // @ts-expect-error
-        // lineHeight: 1.5;
-        // lineHeight: 16px;
-        'line-height': size,
+        'line-height': sizeStr,
       },
       priority: 5,
     },
   }
 }
 
-export function normalizeOptions(
-  configuredOptions: Array<string | number | LineHeightOption>,
-): Array<LineHeightOption> {
+export function normalizeOptions(configuredOptions: Array<string | number>): LineHeightOption[] {
   return configuredOptions
     .map(getOptionDefinition)
     .filter(option => !!option)
@@ -54,7 +48,7 @@ export function normalizeOptions(
 
 export function buildDefinition(
   modelAttributeKey: string,
-  options: LineHeightOption[],
+  options: string[],
 ): LineHeightConverterDefinition {
   const definition: LineHeightConverterDefinition = {
     model: {
@@ -66,18 +60,41 @@ export function buildDefinition(
   }
 
   for (const option of options) {
-    definition.model.values.push(option.model!)
-    definition.view[option.model!] = option.view!
-
-    if (option.upcastAlso)
-      definition.upcastAlso[option.model!] = option.upcastAlso
+    definition.model.values.push(option)
+    definition.view[option] = {
+      key: 'style',
+      value: {
+        'line-height': option,
+      },
+    }
   }
 
   return definition
 }
 
-export interface LineHeightConverterDefinition {
-  model: { key: string, values: Array<string> }
-  view: Record<string, ViewElementDefinition>
-  upcastAlso: Record<string, ArrayOrItem<MatcherPattern>>
+export type LineHeightConverterDefinition<T extends string = string> = {
+  model: string | {
+    key: string
+    name?: string
+  }
+  view: string | (AttributeDescriptor & {
+    name?: string
+  })
+  upcastAlso?: ArrayOrItem<string | (AttributeDescriptor & {
+    name?: string
+  }) | AttributeCreatorFunction>
+  converterPriority?: PriorityString
+} | {
+  model: {
+    key: string
+    name?: string
+    values: Array<T>
+  }
+  view: Record<T, (AttributeDescriptor & {
+    name?: string
+  })>
+  upcastAlso?: Record<T, (AttributeDescriptor & {
+    name?: string
+  }) | AttributeCreatorFunction>
+  converterPriority?: PriorityString
 }

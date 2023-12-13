@@ -101,12 +101,6 @@ function _prepareListOptions(options: LineHeightOption[], command: LineHeightCom
       def.model.set('class', `${def.model.class} ${option.view.classes}`)
 
     def.model.bind('isOn').to(command, 'value', (value) => {
-      if (!value)
-        return false
-
-      if (value === 'default')
-        return false
-
       return value === option.model
     })
 

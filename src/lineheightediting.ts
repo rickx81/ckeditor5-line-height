@@ -1,8 +1,7 @@
 import { type Editor, Plugin } from '@ckeditor/ckeditor5-core'
-import type { ViewElement } from '@ckeditor/ckeditor5-engine'
 
 import LineHeightCommand from './lineheightcommand'
-import { LINE_HEIGHT, buildDefinition, normalizeOptions } from './utils'
+import { LINE_HEIGHT, buildDefinition } from './utils'
 
 export default class LineHeightEditing extends Plugin {
   /**
@@ -17,7 +16,7 @@ export default class LineHeightEditing extends Plugin {
 
     // Define default configuration using named presets.
     editor.config.define(LINE_HEIGHT, {
-      options: [1, 1.25, 1.5, 1.75, 2, 2.25, 2.5],
+      options: ['default', '1', '1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '2', '2.5'],
     })
   }
 
@@ -28,35 +27,18 @@ export default class LineHeightEditing extends Plugin {
     const editor = this.editor
     const schema = editor.model.schema
 
+    const options = editor.config.get('lineHeight.options')!.map(option => String(option))
+
     // Allow LineHeight attribute on all blocks.
     schema.extend('$block', { allowAttributes: LINE_HEIGHT })
     editor.model.schema.setAttributeProperties(LINE_HEIGHT, {
       isFormatting: true,
     })
 
-    // Allow LineHeight attribute on text nodes.
-    editor.model.schema.extend('$text', { allowAttributes: LINE_HEIGHT })
-
     // Define view to model conversion.
-    const options = normalizeOptions(editor.config.get('lineHeight.options')!).filter(item => item.model)
     const definition = buildDefinition(LINE_HEIGHT, options)
 
-    // Set-up the two-way conversion.
-    editor.conversion.attributeToElement(definition)
-
-    editor.conversion.for('upcast').elementToAttribute({
-      view: {
-        name: 'span',
-        styles: {
-          'line-height': /^\d+(.\d+)?$/, // 非负浮点数
-        },
-      },
-      model: {
-        key: LINE_HEIGHT,
-        value: (viewElement: ViewElement) =>
-          viewElement.getStyle('line-height'),
-      },
-    })
+    editor.conversion.attributeToAttribute(definition)
 
     // Add LineHeight Command.
     editor.commands.add(LINE_HEIGHT, new LineHeightCommand(editor))

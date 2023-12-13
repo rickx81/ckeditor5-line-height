@@ -1,6 +1,7 @@
 import { Command, type Editor } from '@ckeditor/ckeditor5-core'
+import { first } from '@ckeditor/ckeditor5-utils'
+import type { Element, Writer } from '@ckeditor/ckeditor5-engine'
 
-import type { LineHeightOption } from './lineheightconfig'
 import { LINE_HEIGHT } from './utils'
 
 /**
@@ -13,7 +14,7 @@ export default class LineHeightCommand extends Command {
    * @observable
    * @readonly
    */
-  public declare value: string | number
+  public declare value: string
 
   /**
    * @inheritDoc
@@ -31,45 +32,49 @@ export default class LineHeightCommand extends Command {
    */
   public override refresh(): void {
     const model = this.editor.model
-    const doc = model.document
+    const document = model.document
 
-    this.value = doc.selection.getAttribute(LINE_HEIGHT) as string | number
-    this.isEnabled = model.schema.checkAttributeInSelection(
-      doc.selection,
-      LINE_HEIGHT,
-    )
+    const firstBlock = first(document.selection.getSelectedBlocks())
+    // As first check whether to enable or disable the command as the value will always be false if the command cannot be enabled.
+    this.isEnabled = !!firstBlock && this._canSetLineHeight(firstBlock)
+
+    this.value = (this.isEnabled && firstBlock!.hasAttribute(LINE_HEIGHT))
+      ? firstBlock!.getAttribute(LINE_HEIGHT) as string
+      : 'default'
   }
 
-  public override execute(options: { value?: LineHeightOption } = {}): void {
+  public override execute(options: { value?: string } = {}): void {
     const editor = this.editor
     const model = editor.model
     const document = model.document
-    const selection = document.selection
 
     const value = options.value
 
     model.change((writer) => {
-      if (selection.isCollapsed) {
-        if (value)
-          writer.setSelectionAttribute(LINE_HEIGHT, value)
+      const blocks = Array.from(document.selection.getSelectedBlocks())
+        .filter(block => this._canSetLineHeight(block))
 
-        else
-          writer.removeSelectionAttribute(LINE_HEIGHT)
-      }
-      else {
-        const ranges = model.schema.getValidRanges(
-          selection.getRanges(),
-          LINE_HEIGHT,
-        )
+      const currentLineHeight = blocks[0].getAttribute(LINE_HEIGHT)
+      const removeLineHeight = currentLineHeight === value || !value
 
-        for (const range of ranges) {
-          if (value)
-            writer.setAttribute(LINE_HEIGHT, value, range)
-
-          else
-            writer.removeAttribute(LINE_HEIGHT, range)
-        }
-      }
+      if (removeLineHeight)
+        removeLineHeightFromSelection(blocks, writer)
+      else
+        setLineHeightOnSelection(blocks, writer, value)
     })
   }
+
+  private _canSetLineHeight(block: Element) {
+    return this.editor.model.schema.checkAttribute(block, LINE_HEIGHT)
+  }
+}
+
+function removeLineHeightFromSelection(blocks: Element[], writer: Writer) {
+  for (const block of blocks)
+    writer.removeAttribute(LINE_HEIGHT, block)
+}
+
+function setLineHeightOnSelection(blocks: Element[], writer: Writer, lineHeight: string) {
+  for (const block of blocks)
+    writer.setAttribute(LINE_HEIGHT, lineHeight, block)
 }

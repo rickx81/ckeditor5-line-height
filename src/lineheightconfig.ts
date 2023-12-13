@@ -1,12 +1,7 @@
 import type { MatcherPattern, ViewElementDefinition } from '@ckeditor/ckeditor5-engine'
 
 export interface LineHeightConfig {
-  options?: Array<string | number | LineHeightOption>
-}
-
-export interface LineHeightFormat {
-  name: LineHeightOption
-  className?: string
+  options?: string[]
 }
 
 export interface LineHeightOption {
