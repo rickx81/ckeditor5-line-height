@@ -16,8 +16,7 @@
     "build",
     "dist",
     "lang",
-    "src/**/*.d.ts",
-    "src/**/*.js",
+    "src",
     "theme"
   ],
   "scripts": {
