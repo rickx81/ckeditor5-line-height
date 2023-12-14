@@ -12,6 +12,7 @@
   },
   "bugs": "https://github.com/rickx81/ckeditor5-line-height/issues",
   "main": "src/index.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "build",
     "dist",
@@ -20,8 +21,10 @@
     "theme"
   ],
   "scripts": {
+    "predll:build": "npm run build",
     "dll:build": "webpack",
     "build": "tsc -p ./tsconfig.json",
+    "release": "npm run dll:build && node ./scripts/updatePackageEntryPoint.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -39,6 +42,7 @@
     "css-loader": "^6.8.1",
     "esbuild-loader": "^4.0.2",
     "eslint": "^8.55.0",
+    "fs-extra": "^11.2.0",
     "postcss-loader": "^7.3.3",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.3",

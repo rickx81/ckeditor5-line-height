@@ -40,6 +40,9 @@ devDependencies:
   eslint:
     specifier: ^8.55.0
     version: 8.55.0
+  fs-extra:
+    specifier: ^11.2.0
+    version: 11.2.0
   postcss-loader:
     specifier: ^7.3.3
     version: 7.3.3(postcss@8.4.32)(typescript@5.3.3)(webpack@5.89.0)
@@ -2807,6 +2810,15 @@ packages:
 
   /flatted@3.2.9:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
+    dev: true
+
+  /fs-extra@11.2.0:
+    resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
+    engines: {node: '>=14.14'}
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.1.0
+      universalify: 2.0.1
     dev: true
 
   /fs-extra@9.1.0:
