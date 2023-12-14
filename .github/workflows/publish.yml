@@ -16,23 +16,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - run: pnpm i
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
           registry-url: https://registry.npmjs.org/
       - uses: pnpm/action-setup@v2
         with:
           version: 8
+      - run: pnpm i
       - run: pnpm release
       - run: npm publish
         env:
