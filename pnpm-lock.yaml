@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   ckeditor5:
-    specifier: ^40.2.0
+    specifier: 40.2.0
     version: 40.2.0
 
 devDependencies:
@@ -14,22 +14,22 @@ devDependencies:
     specifier: ^2.6.1
     version: 2.6.1(@vue/compiler-sfc@3.3.13)(eslint@8.56.0)(typescript@5.3.3)
   '@ckeditor/ckeditor5-core':
-    specifier: ^40.2.0
+    specifier: 40.2.0
     version: 40.2.0
   '@ckeditor/ckeditor5-dev-utils':
     specifier: ^39.5.0
     version: 39.5.0(webpack@5.89.0)
   '@ckeditor/ckeditor5-engine':
-    specifier: ^40.2.0
+    specifier: 40.2.0
     version: 40.2.0
   '@ckeditor/ckeditor5-theme-lark':
-    specifier: ^40.2.0
+    specifier: 40.2.0
     version: 40.2.0
   '@ckeditor/ckeditor5-ui':
-    specifier: ^40.2.0
+    specifier: 40.2.0
     version: 40.2.0
   '@ckeditor/ckeditor5-utils':
-    specifier: ^40.2.0
+    specifier: 40.2.0
     version: 40.2.0
   css-loader:
     specifier: ^6.8.1
