@@ -39,5 +39,6 @@
     "jsonc",
     "yaml",
     "toml"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }

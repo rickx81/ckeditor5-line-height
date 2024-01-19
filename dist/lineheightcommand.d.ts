@@ -1,4 +1,4 @@
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from 'ckeditor5/src/core';
 /**
  * The lineHeight command plugin.
  */

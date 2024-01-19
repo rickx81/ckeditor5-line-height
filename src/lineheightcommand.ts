@@ -1,6 +1,6 @@
-import { Command, type Editor } from '@ckeditor/ckeditor5-core'
-import { first } from '@ckeditor/ckeditor5-utils'
-import type { Element, Writer } from '@ckeditor/ckeditor5-engine'
+import { Command, type Editor } from 'ckeditor5/src/core'
+import { first } from 'ckeditor5/src/utils'
+import type { Element, Writer } from 'ckeditor5/src/engine'
 
 import { LINE_HEIGHT } from './utils'
 

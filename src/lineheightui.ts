@@ -1,6 +1,6 @@
-import { Plugin } from '@ckeditor/ckeditor5-core'
-import { Collection } from '@ckeditor/ckeditor5-utils'
-import { type ListDropdownItemDefinition, Model, addListToDropdown, createDropdown } from '@ckeditor/ckeditor5-ui'
+import { Plugin } from 'ckeditor5/src/core'
+import { Collection } from 'ckeditor5/src/utils'
+import { type ListDropdownItemDefinition, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5/src/ui'
 
 import lineHeightIcon from '../theme/line-height.svg'
 import { LINE_HEIGHT, normalizeOptions } from './utils'
@@ -20,6 +20,7 @@ export default class LineHeightUI extends Plugin {
    */
   public init(): void {
     const editor = this.editor
+    const componentFactory = editor.ui.componentFactory
     const t = editor.t
 
     const options = this._getLocalizedOptions()
@@ -27,7 +28,7 @@ export default class LineHeightUI extends Plugin {
     const command: LineHeightCommand = editor.commands.get(LINE_HEIGHT)!
 
     // Register UI component.
-    editor.ui.componentFactory.add(LINE_HEIGHT, (locale) => {
+    componentFactory.add(LINE_HEIGHT, (locale) => {
       const dropdownView = createDropdown(locale)
       addListToDropdown(dropdownView, _prepareListOptions(options, command))
 
@@ -86,9 +87,9 @@ function _prepareListOptions(options: LineHeightOption[], command: LineHeightCom
   const itemDefinitions = new Collection<ListDropdownItemDefinition>()
 
   for (const option of options) {
-    const def = {
+    const def: ListDropdownItemDefinition = {
       type: 'button' as const,
-      model: new Model({
+      model: new ViewModel({
         commandName: LINE_HEIGHT,
         commandParam: option.model,
         label: option.title,
@@ -96,9 +97,6 @@ function _prepareListOptions(options: LineHeightOption[], command: LineHeightCom
         withText: true,
       }),
     }
-
-    if (option.view && typeof option.view !== 'string' && option.view.classes)
-      def.model.set('class', `${def.model.class} ${option.view.classes}`)
 
     def.model.bind('isOn').to(command, 'value', (value) => {
       return value === option.model

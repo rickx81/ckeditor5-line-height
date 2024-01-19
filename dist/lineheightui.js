@@ -1,6 +1,6 @@
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Collection } from '@ckeditor/ckeditor5-utils';
-import { Model, addListToDropdown, createDropdown } from '@ckeditor/ckeditor5-ui';
+import { Plugin } from 'ckeditor5/src/core';
+import { Collection } from 'ckeditor5/src/utils';
+import { ViewModel, addListToDropdown, createDropdown } from 'ckeditor5/src/ui';
 import lineHeightIcon from '../theme/line-height.svg';
 import { LINE_HEIGHT, normalizeOptions } from './utils';
 export default class LineHeightUI extends Plugin {
@@ -15,11 +15,12 @@ export default class LineHeightUI extends Plugin {
      */
     init() {
         const editor = this.editor;
+        const componentFactory = editor.ui.componentFactory;
         const t = editor.t;
         const options = this._getLocalizedOptions();
         const command = editor.commands.get(LINE_HEIGHT);
         // Register UI component.
-        editor.ui.componentFactory.add(LINE_HEIGHT, (locale) => {
+        componentFactory.add(LINE_HEIGHT, (locale) => {
             const dropdownView = createDropdown(locale);
             addListToDropdown(dropdownView, _prepareListOptions(options, command));
             // Create dropdown model.
@@ -67,7 +68,7 @@ function _prepareListOptions(options, command) {
     for (const option of options) {
         const def = {
             type: 'button',
-            model: new Model({
+            model: new ViewModel({
                 commandName: LINE_HEIGHT,
                 commandParam: option.model,
                 label: option.title,
@@ -75,8 +76,6 @@ function _prepareListOptions(options, command) {
                 withText: true,
             }),
         };
-        if (option.view && typeof option.view !== 'string' && option.view.classes)
-            def.model.set('class', `${def.model.class} ${option.view.classes}`);
         def.model.bind('isOn').to(command, 'value', (value) => {
             return value === option.model;
         });

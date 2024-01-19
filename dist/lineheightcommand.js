@@ -1,5 +1,5 @@
-import { Command } from '@ckeditor/ckeditor5-core';
-import { first } from '@ckeditor/ckeditor5-utils';
+import { Command } from 'ckeditor5/src/core';
+import { first } from 'ckeditor5/src/utils';
 import { LINE_HEIGHT } from './utils';
 /**
  * The lineHeight command plugin.

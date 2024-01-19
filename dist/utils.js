@@ -3,7 +3,8 @@
  */
 export const LINE_HEIGHT = 'lineHeight';
 function getOptionDefinition(option) {
-    if (typeof option === 'object')
+    // Check whether passed option is a full item definition provided by user in configuration.
+    if (typeof option === 'object' && isFullItemDefinition(option))
         return option;
     // 'Default' lineHeight. It will be used to remove the lineHeight attribute.
     if (option === 'default') {
@@ -14,23 +15,21 @@ function getOptionDefinition(option) {
     }
     return generatePreset(option);
 }
-function generatePreset(size) {
-    const sizeStr = String(size);
+function generatePreset(definition) {
+    if (typeof definition !== 'object') {
+        definition = {
+            title: String(definition),
+            model: String(definition),
+        };
+    }
     return {
-        title: sizeStr,
-        model: sizeStr,
-        view: {
-            name: 'span',
-            styles: {
-                'line-height': sizeStr,
-            },
-            priority: 5,
-        },
+        title: definition.title,
+        model: definition.model,
     };
 }
 export function normalizeOptions(configuredOptions) {
     return configuredOptions
-        .map(getOptionDefinition)
+        .map(item => getOptionDefinition(item))
         .filter(option => !!option);
 }
 export function buildDefinition(modelAttributeKey, options) {
@@ -40,16 +39,21 @@ export function buildDefinition(modelAttributeKey, options) {
             values: [],
         },
         view: {},
-        upcastAlso: {},
     };
     for (const option of options) {
-        definition.model.values.push(option);
-        definition.view[option] = {
+        definition.model.values.push(option.model);
+        definition.view[option.model] = {
             key: 'style',
             value: {
-                'line-height': option,
+                'line-height': option.model,
             },
         };
     }
     return definition;
+}
+/**
+ * We treat `definition` as completed if it is an object that contains `title`, `model` and `view` values.
+ */
+function isFullItemDefinition(definition) {
+    return definition.title && definition.model && definition.view;
 }

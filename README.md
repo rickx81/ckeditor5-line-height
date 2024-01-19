@@ -29,8 +29,25 @@ ClassicEditor
       /* ..., */
       LineHeight, // add it to your plugins array
     ],
-    lineHeight: { // specify your otions in the lineHeight config object. Default values are ['default', '1', '1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '2', '2.5']
-      options: ['1', '1.2', '1.4', '1.5', '1.6', '2'],
+    lineHeight: {
+      // specify your otions in the lineHeight config object.
+      // Default values are ['default', 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2, 2.5]
+      options: [
+        1.2,
+        1.5,
+        'default',
+        '14px',
+        '16px',
+        '18px',
+        {
+          title: 'Normal',
+          model: '1',
+        },
+        {
+          title: 'Huge',
+          model: '36px'
+        },
+      ],
     },
     toolbar: [
       /* ..., */

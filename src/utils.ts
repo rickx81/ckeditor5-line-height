@@ -1,7 +1,5 @@
-import type { AttributeDescriptor } from '@ckeditor/ckeditor5-engine'
-import type { AttributeCreatorFunction } from '@ckeditor/ckeditor5-engine/src/conversion/downcasthelpers'
+import type { AttributeDescriptor } from 'ckeditor5/src/engine'
 
-import type { ArrayOrItem, PriorityString } from '@ckeditor/ckeditor5-utils'
 import type { LineHeightOption } from './lineheightconfig'
 
 /**
@@ -9,8 +7,9 @@ import type { LineHeightOption } from './lineheightconfig'
  */
 export const LINE_HEIGHT = 'lineHeight'
 
-function getOptionDefinition(option: number | string): LineHeightOption {
-  if (typeof option === 'object')
+function getOptionDefinition(option: string | number | LineHeightOption): LineHeightOption {
+  // Check whether passed option is a full item definition provided by user in configuration.
+  if (typeof option === 'object' && isFullItemDefinition(option))
     return option
 
   // 'Default' lineHeight. It will be used to remove the lineHeight attribute.
@@ -24,31 +23,29 @@ function getOptionDefinition(option: number | string): LineHeightOption {
   return generatePreset(option)
 }
 
-function generatePreset(size: number | string): LineHeightOption {
-  const sizeStr = String(size)
+function generatePreset(definition: string | number | LineHeightOption): LineHeightOption {
+  if (typeof definition !== 'object') {
+    definition = {
+      title: String(definition),
+      model: String(definition),
+    }
+  }
 
   return {
-    title: sizeStr,
-    model: sizeStr,
-    view: {
-      name: 'span',
-      styles: {
-        'line-height': sizeStr,
-      },
-      priority: 5,
-    },
+    title: definition.title,
+    model: definition.model,
   }
 }
 
-export function normalizeOptions(configuredOptions: Array<string | number>): LineHeightOption[] {
+export function normalizeOptions(configuredOptions: (string | number | LineHeightOption)[]): LineHeightOption[] {
   return configuredOptions
-    .map(getOptionDefinition)
+    .map(item => getOptionDefinition(item))
     .filter(option => !!option)
 }
 
 export function buildDefinition(
   modelAttributeKey: string,
-  options: string[],
+  options: LineHeightOption[],
 ): LineHeightConverterDefinition {
   const definition: LineHeightConverterDefinition = {
     model: {
@@ -56,15 +53,14 @@ export function buildDefinition(
       values: [],
     },
     view: {},
-    upcastAlso: {},
   }
 
   for (const option of options) {
-    definition.model.values.push(option)
-    definition.view[option] = {
+    definition.model.values.push(option.model!)
+    definition.view[option.model!] = {
       key: 'style',
       value: {
-        'line-height': option,
+        'line-height': option.model!,
       },
     }
   }
@@ -72,29 +68,17 @@ export function buildDefinition(
   return definition
 }
 
-export type LineHeightConverterDefinition<T extends string = string> = {
-  model: string | {
-    key: string
-    name?: string
-  }
-  view: string | (AttributeDescriptor & {
-    name?: string
-  })
-  upcastAlso?: ArrayOrItem<string | (AttributeDescriptor & {
-    name?: string
-  }) | AttributeCreatorFunction>
-  converterPriority?: PriorityString
-} | {
+/**
+ * We treat `definition` as completed if it is an object that contains `title`, `model` and `view` values.
+ */
+function isFullItemDefinition(definition: Record<string, any>): boolean {
+  return definition.title && definition.model && definition.view
+}
+
+export interface LineHeightConverterDefinition {
   model: {
     key: string
-    name?: string
-    values: Array<T>
+    values: Array<string>
   }
-  view: Record<T, (AttributeDescriptor & {
-    name?: string
-  })>
-  upcastAlso?: Record<T, (AttributeDescriptor & {
-    name?: string
-  }) | AttributeCreatorFunction>
-  converterPriority?: PriorityString
+  view: Record<string, AttributeDescriptor>
 }
