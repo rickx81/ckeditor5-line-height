@@ -1,5 +1,3 @@
-import type { MatcherPattern, ViewElementDefinition } from 'ckeditor5/src/engine'
-
 export interface LineHeightConfig {
   /**
    * The default value is:

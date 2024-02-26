@@ -29,22 +29,22 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "ckeditor5": "41.0.0"
+    "ckeditor5": "41.1.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
-    "@ckeditor/ckeditor5-core": "41.0.0",
-    "@ckeditor/ckeditor5-dev-utils": "^39.5.1",
-    "@ckeditor/ckeditor5-theme-lark": "41.0.0",
-    "css-loader": "^6.9.1",
-    "esbuild-loader": "^4.0.2",
-    "eslint": "^8.56.0",
+    "@antfu/eslint-config": "^2.6.4",
+    "@ckeditor/ckeditor5-core": "41.1.0",
+    "@ckeditor/ckeditor5-dev-utils": "^39.6.1",
+    "@ckeditor/ckeditor5-theme-lark": "41.1.0",
+    "css-loader": "^6.10.0",
+    "esbuild-loader": "^4.0.3",
+    "eslint": "^8.57.0",
     "fs-extra": "^11.2.0",
     "postcss-loader": "^7.3.4",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.4",
     "typescript": "^5.3.3",
-    "webpack": "^5.89.0",
+    "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
   }
 }
