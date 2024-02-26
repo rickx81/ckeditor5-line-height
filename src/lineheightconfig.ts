@@ -38,7 +38,7 @@ export interface LineHeightConfig {
    * For example, the following code will apply the `lineHeight` attribute with the **tiny** value to the current selection:
    *
    * ```ts
-   * editor.execute( 'lineHeight', { value: 1.5 } );
+   * editor.execute('lineHeight', { value: 1.5 });
    * ```
    *
    * Executing the `lineHeight` command without value will remove the `lineHeight` attribute from the current selection.
