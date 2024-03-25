@@ -1,6 +1,6 @@
 import { Plugin } from 'ckeditor5/src/core'
 import { Collection } from 'ckeditor5/src/utils'
-import { type ListDropdownItemDefinition, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5/src/ui'
+import { type ListDropdownItemDefinition, Model, addListToDropdown, createDropdown } from 'ckeditor5/src/ui'
 
 import lineHeightIcon from '../theme/line-height.svg'
 import { LINE_HEIGHT, normalizeOptions } from './utils'
@@ -89,7 +89,7 @@ function _prepareListOptions(options: LineHeightOption[], command: LineHeightCom
   for (const option of options) {
     const def: ListDropdownItemDefinition = {
       type: 'button' as const,
-      model: new ViewModel({
+      model: new Model({
         commandName: LINE_HEIGHT,
         commandParam: option.model,
         label: option.title,
