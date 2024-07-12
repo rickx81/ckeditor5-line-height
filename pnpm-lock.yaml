@@ -6,22 +6,22 @@ settings:
 
 dependencies:
   ckeditor5:
-    specifier: 41.4.1
-    version: 41.4.1
+    specifier: 41.4.2
+    version: 41.4.2
 
 devDependencies:
   '@antfu/eslint-config':
     specifier: ~2.21.3
     version: 2.21.3(@vue/compiler-sfc@3.4.31)(eslint@8.57.0)(typescript@5.5.3)
   '@ckeditor/ckeditor5-core':
-    specifier: 41.4.1
-    version: 41.4.1
+    specifier: 41.4.2
+    version: 41.4.2
   '@ckeditor/ckeditor5-dev-utils':
     specifier: ^39.9.1
     version: 39.9.1(webpack@5.93.0)
   '@ckeditor/ckeditor5-theme-lark':
-    specifier: 41.4.1
-    version: 41.4.1
+    specifier: 41.4.2
+    version: 41.4.2
   css-loader:
     specifier: ^6.11.0
     version: 6.11.0(webpack@5.93.0)
@@ -266,10 +266,10 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@ckeditor/ckeditor5-adapter-ckfinder@41.4.1:
-    resolution: {integrity: sha512-0ipZ6+ZUE62UeNqTuOCeoIqJMG8KBdYSDfEcQyIN82Joqkl02nyOWOIBubgclPpP3QxpugtR4BPr1olX14nCnQ==}
+  /@ckeditor/ckeditor5-adapter-ckfinder@41.4.2:
+    resolution: {integrity: sha512-yXVVEy+lEmyvYwTxn76Ff53fK/qJphf9stoBF4kFKKK/Tfi59EMog2Ctk3iIkLLyt74KmxzvuCXZwE00wDqfLA==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -277,10 +277,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-alignment@41.4.1:
-    resolution: {integrity: sha512-WxC/D1kbHcFqNrHUDSqp6o/kTANNp9okd0z11MAa+fAyLFOvoBkt+wuex7K74RLbyvzNvkypaGUM0FqwA1bEWA==}
+  /@ckeditor/ckeditor5-alignment@41.4.2:
+    resolution: {integrity: sha512-kFiEIZfUNt2TCrwJgM4mot6LLqzbH4vbfYcjbrsUz28kLv8guzcwKXPRe0ZrHo+WS7Cny8j5aCEuUAs3sxEmAg==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -288,10 +288,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-autoformat@41.4.1:
-    resolution: {integrity: sha512-Uu9haGf2hNmRZqOujY5YJUkIJCoyUmOQV32HWPjZY69cSQDW8yhajHlcLApYW+NNgVHhllKOEDhOMvTXMAH87g==}
+  /@ckeditor/ckeditor5-autoformat@41.4.2:
+    resolution: {integrity: sha512-Ukit63jHiAuLyfESdLSc6ya12xKJxDP83krZFiMY5bfXssg0z39CGuHOZlwaI9r7bBjWWMGJJeaC/9i/6L9y7g==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -299,10 +299,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-autosave@41.4.1:
-    resolution: {integrity: sha512-iOuQ3rPzTHmzS0AFOKnolCjwhy8UJAeW6wI6eZbeBaXNN1q7q7dHXHaGIW+Jte3H+Tgi/ZexcyUTmVJJti1+tQ==}
+  /@ckeditor/ckeditor5-autosave@41.4.2:
+    resolution: {integrity: sha512-TgaUhpFfG9csm4seL7LQSS6Rn+Gcm/wteGyD+Yl50BG1mfMIL259KEFkVTXDRwJadQm2KiiHZDLqpcd/lAqc0A==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -311,10 +311,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-basic-styles@41.4.1:
-    resolution: {integrity: sha512-AI6WQPNgOPFNGDXSP4dkBn+xyeNlmJE9qVlAE9HhLHEf3fcc/R3lRC3XMnTdupMnccHjf6esIlb3xhkbKJ0NVg==}
+  /@ckeditor/ckeditor5-basic-styles@41.4.2:
+    resolution: {integrity: sha512-+Y+M9/JRX3xSHX/E5zFwzuKPzEeeuL61wcig1DuEz7GvK5sRLJcbdVQmiJnfDh3iOcf/ob1nahNgHAEoCno0Dw==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -322,10 +322,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-block-quote@41.4.1:
-    resolution: {integrity: sha512-l/woHLuzkL+X8k67l90goE1LdVDX3J0+frp93x9siDpevKbF0am5R2/nI4nxGrr8BfsB7PqIESHcIE3uDkzVjQ==}
+  /@ckeditor/ckeditor5-block-quote@41.4.2:
+    resolution: {integrity: sha512-tkEKd3pmDO8QWm243FRDRUv5COayXYZJpMFUL6blw3m6IXb4ujcXKn61A+UwUO+kM0NGTuepHZJkFSuV1/90sw==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -333,30 +333,30 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-build-balloon-block@41.4.1:
-    resolution: {integrity: sha512-huaOjCgPwIbzvPjClKPqowKdvU5E746T7uxP+Z+0dFhadEDv1SBdk8bKgXiv+rzHP5wR2Zlt3HBbVZTuuUvsdA==}
+  /@ckeditor/ckeditor5-build-balloon-block@41.4.2:
+    resolution: {integrity: sha512-p2pXJcS0hNuDZXyMi0frSwLZBm1hGGEEajJtAvKdg+pKZvvrIabQzvjtrkUf5P6Lbhl/z1/v2h0pBa76025Q5Q==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-balloon': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-balloon': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -364,29 +364,29 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-build-balloon@41.4.1:
-    resolution: {integrity: sha512-OsDjibbuoKAhi1N2pR0zA3Xp4FXP6dtzgIznv8dIhz54eOGIsY+RfRA2M+C9fVswoHBnXKFk4tP834GzdtqMTA==}
+  /@ckeditor/ckeditor5-build-balloon@41.4.2:
+    resolution: {integrity: sha512-4FLvd2OV4UgPva0/+xHT4ZuEzKLxB9M6D04/G0YFFwvbPiy71zH0iEMj132Wd0fdEJ0fwjF1HfDzhNgI9BPhPA==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-balloon': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-balloon': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -394,29 +394,29 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-build-classic@41.4.1:
-    resolution: {integrity: sha512-2UcNSmkCl1VAidQql3qlLZ7lRx6mIiN3Xzhw7StRogM0zy84tTKNqVCKve5YL1eZrNseP/ghsHKPyeGh5T/jzQ==}
+  /@ckeditor/ckeditor5-build-classic@41.4.2:
+    resolution: {integrity: sha512-fdsxmEPdNdo/usXyYMS2cN/E9KcQIrtmImUYDI+jEs6yzmSgI8By01n+enkKgVxu+2t+g+ctjQwrCpiyWIHTAQ==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-classic': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-classic': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -424,31 +424,31 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-build-decoupled-document@41.4.1:
-    resolution: {integrity: sha512-NPbD0kl4GSd++tboJDp69uDOrOiX8EQyaRhqKDVcXTNyht9iMeAiUKiFUqa8HXD11FCvBgGopqrhqIuX6QrARA==}
+  /@ckeditor/ckeditor5-build-decoupled-document@41.4.2:
+    resolution: {integrity: sha512-YIjcJc9flghFsA5gZaL5oIf6TxLJxUZpXgWYa9l5C68enm36bsDycgJWGGbexHK2HOR9AnBr6ThUBQJkn3StTg==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-alignment': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-decoupled': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-font': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-alignment': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-decoupled': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-font': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -456,29 +456,29 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-build-inline@41.4.1:
-    resolution: {integrity: sha512-YsRORF9CgDhc5paCxEtTLWZq3py0YK2bZlU+5QpTvMmBBqzfhXAOzJ8Vt/Gp3/iH6w7mKDxJJKe+bU4t/Zn3Dw==}
+  /@ckeditor/ckeditor5-build-inline@41.4.2:
+    resolution: {integrity: sha512-h57jjFm0cSOFGSTA2MbvhSXMFxUbPZqwIeA9S0bfUNcGrnm84YaerX8ev8ZP2iMLOckPOcjBiC/70Sp0SvGwxg==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-inline': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-inline': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -486,29 +486,29 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-build-multi-root@41.4.1:
-    resolution: {integrity: sha512-bE8c8IlOC7Isidy7Cww/88ptcxeEEFQeIwxsEZKu+FJqHgUaNgINEysc1ehEHXHQFKYd/1ZxNluFvhB6iUFWaA==}
+  /@ckeditor/ckeditor5-build-multi-root@41.4.2:
+    resolution: {integrity: sha512-Hou3cHuzx2YR6cfbTYYgk2cSBkudCfPru471KxsXUtzw+B7KuHLm3LtnLJNpScF2WoGaOoaFzB9D2PkzlhF5hA==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-multi-root': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-multi-root': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -516,11 +516,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-ckbox@41.4.1:
-    resolution: {integrity: sha512-GKYY8ne9rJ1gJJUH6jKpoGUZXdifSD5HOTSgExICGS9y6E59defTfXDawYqqF7omCF/eiVbvwDdhBcrXhnWC2w==}
+  /@ckeditor/ckeditor5-ckbox@41.4.2:
+    resolution: {integrity: sha512-u6HVTW7O+YSeeCZ+plg78aW74B2G+E7uKy5YQxvB99uCXGWmYy57D2maaEkPI87ZwZD3VlRnvAalaAdngc4M1g==}
     dependencies:
       blurhash: 2.0.5
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -529,10 +529,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-ckfinder@41.4.1:
-    resolution: {integrity: sha512-JahoSt9mRjnZaO/jHuMELEMeHlTbHbkB4jSezA1lKvQAvslIL6ftCVzhnZqa9OAE2gdgtkYBTYIHaEJkNK29kg==}
+  /@ckeditor/ckeditor5-ckfinder@41.4.2:
+    resolution: {integrity: sha512-QB3igdZOBI+I8q6eTA5+q27VQrj3Nu7PctNKRehwMC/Z6URboTnntqtkZ3inAZEbWcoLTN2tpDthlufUbQ+cfA==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -540,21 +540,21 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-clipboard@41.4.1:
-    resolution: {integrity: sha512-YrTHv+nuHTnaeIZr/jVlKIH5Grus6nP/qhbYV0t/qmZ8IPmUG+r06gzrHtoIKCshJeFqMa7Eld2a0o86Ohj1MQ==}
+  /@ckeditor/ckeditor5-clipboard@41.4.2:
+    resolution: {integrity: sha512-cMoGXClFxp5uR5Wr1cZnop5IdmqTZXTcrUuEoyhF+1hk+QDhp2ibQ2dTKu6hw+TTzw3Xd6g8Kj0Oj+mXoIur+w==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
-      '@ckeditor/ckeditor5-widget': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
+      '@ckeditor/ckeditor5-widget': 41.4.2
       lodash-es: 4.17.21
     dev: false
 
-  /@ckeditor/ckeditor5-cloud-services@41.4.1:
-    resolution: {integrity: sha512-8gQxGYB/+JIwU5hv5sA0UjfGPaShmqRWnzvqBPTXQd1QjYEpgM1+EXw/Krq6/K3XCAe9GEOZBYPhEoJnbDp8WQ==}
+  /@ckeditor/ckeditor5-cloud-services@41.4.2:
+    resolution: {integrity: sha512-rgDrpEonA2AchfvgYaeb/olMk/HYxUK4B8XPqs+nJxLmBraTv2lANsgsMbwsqAIiRjT9MknmJdX+CEbqljgL/w==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -562,10 +562,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-code-block@41.4.1:
-    resolution: {integrity: sha512-h8Qk/jjAvMQzLh6ITsUTG+q13kp5au0gZoIwwfWf0kdn49Ohaa8qzlVtdhC6l//+1pFQLofX5fsWiCtBXCSNiw==}
+  /@ckeditor/ckeditor5-code-block@41.4.2:
+    resolution: {integrity: sha512-NyPvffk+yA2rWsiF3Q/dDyO1ZtUvlX5hEVEWCG9C4wz9NVtBmoK0v1HmcsBDYQ//TwLY3N8HA0LX00UGTHVGFw==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -574,11 +574,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-core@41.4.1:
-    resolution: {integrity: sha512-1tL6Wpm7ZaxfJ/tl/OEtkchFqU817IvDfcnOZCASto4FwNghAK6owJRvrK/PTZFxlVvuapJetREUWIAXcc65Bg==}
+  /@ckeditor/ckeditor5-core@41.4.2:
+    resolution: {integrity: sha512-kCIJjviiMNIMBMx7XFXFp1IeTELQKv7xyPJiVFDyUftIfthf9uWty72ipZ3BBNBGBkaoTiSzDZ507EsX6czuIQ==}
     dependencies:
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
       lodash-es: 4.17.21
 
   /@ckeditor/ckeditor5-dev-translations@39.9.1:
@@ -627,10 +627,10 @@ packages:
       - webpack
     dev: true
 
-  /@ckeditor/ckeditor5-easy-image@41.4.1:
-    resolution: {integrity: sha512-W8+71L3Fc0Ey4QmDs3zFngGLHn1345TSqUoW22HGt3c8RjKGmD49IL3XvGn19mqGOGDDpWcEaKfjtyyDuf/YoQ==}
+  /@ckeditor/ckeditor5-easy-image@41.4.2:
+    resolution: {integrity: sha512-HJJ3Z4R4mCazV2cz+s8bI00ci3/KyIa+fXodBN1+kg3PldX471zSj+DtyFsZyKnUcpUTVygjPEaHKBDpxtUhjQ==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -638,10 +638,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-editor-balloon@41.4.1:
-    resolution: {integrity: sha512-kfrvZFowfhfg/pk8jddLG5GA+1TcmkQHdztH7DFyGem8T5afihs9Q5yLErI2kpJZEca4jLIehTem5cinu6Sq+g==}
+  /@ckeditor/ckeditor5-editor-balloon@41.4.2:
+    resolution: {integrity: sha512-5KI9spGZY1W2GpRLc0aJiqm1/33sGX9vxXAvIRabSF1uhK4b2WP6zdjGy0IcwBpIRnAkEGoPoetFmx1esJOVDw==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -650,10 +650,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-editor-classic@41.4.1:
-    resolution: {integrity: sha512-j0n8Jeusli4NU1C8kCsbDSqSdHQPuoiz5lU48a2gBH3pWt9G5y/ElcS+xXu9XUjRSe916hlS90aaXxsbP2e/VQ==}
+  /@ckeditor/ckeditor5-editor-classic@41.4.2:
+    resolution: {integrity: sha512-BVf4ipZz36eCTDFiQ8hqN+oBmuvZPzCmNDDjCYuHNGCKGLaIo1Yzi09fHPUWDw1U+en6Cgnwc2HSWgwf7zC7aA==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -662,10 +662,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-editor-decoupled@41.4.1:
-    resolution: {integrity: sha512-bcUSK9sdZ80aSVlNmNaDCBCMdeNfs1kY0jdh2qPrLcERIOBSDBmNfOXd/JGGqY+Ooyr5O3qeOyXzenSiq5VHHQ==}
+  /@ckeditor/ckeditor5-editor-decoupled@41.4.2:
+    resolution: {integrity: sha512-kzy+Az4Dn+5dCR0FMk1qzlGaqbgNSi0a7qLr17ghfVnqbLYmhhELjgLOKU9cjjIm5L2KMEH2qRq5QHlacO90kA==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -674,10 +674,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-editor-inline@41.4.1:
-    resolution: {integrity: sha512-4cDeDwITsADi4J7xHJ+GFB8fUHXnayuCi9U2qED7DsikKU8lkJR0Faqvhpxzk2R72TC9vzvyLIxV4hyDWoaLgg==}
+  /@ckeditor/ckeditor5-editor-inline@41.4.2:
+    resolution: {integrity: sha512-NlDYZzVVpZblkeVLNrguC437PMqYEXNRGB+KF2uzV5/vPAjz3SjleVcGlbTAWVbMQAUMoOtrmrJjeTR4S93UMA==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -686,10 +686,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-editor-multi-root@41.4.1:
-    resolution: {integrity: sha512-Ohaf4eHhKZwSd4JBNu3kWjOVdT591K/HVkQ4tRul9x/CrfSaTXdZCC7rXtbRr0ldByiXxMnrLN6HyuR4qyCvsA==}
+  /@ckeditor/ckeditor5-editor-multi-root@41.4.2:
+    resolution: {integrity: sha512-sqmSEHzX0C3L5H+Svj1dSOyetxOnVb5vL2eS/EdzRpnhThwaPsTVWI83bGHPRTh4h89yEli3nMbNsdTTnsR7Rw==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -698,24 +698,24 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-engine@41.4.1:
-    resolution: {integrity: sha512-uIBU7NVhpXI1+xnFu75ADenMhj0U0AfCpuC/wT9iV3588amqhB3+ycYNCKf9HWPX8jy9p8lwS30Q3mR+RAlIuw==}
+  /@ckeditor/ckeditor5-engine@41.4.2:
+    resolution: {integrity: sha512-25JqIzNYvCqQ6f02YY+a8A8xtjClzI0YCio0JGoRG3JHJXzYsQbTPsiokuE1BCwMCu3gYoFz8eKJYt2selLsCw==}
     dependencies:
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-utils': 41.4.2
       lodash-es: 4.17.21
 
-  /@ckeditor/ckeditor5-enter@41.4.1:
-    resolution: {integrity: sha512-USeAB9NYehgugfSyrVPX0h+CfY3J5tPlrdvVPTRo91+wDIx5Eduyh7k1ILVZ/BJ7swzbiKaNJFXnWERPPoW7LA==}
+  /@ckeditor/ckeditor5-enter@41.4.2:
+    resolution: {integrity: sha512-pvNNcFGn7TFFuJ1QbT0Jggd5xflORxa5i32nZuSzDLVflXGDKq53xSXxapCzd7XsiVXQlufbXt2SlGj7lhyP1w==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-essentials@41.4.1:
-    resolution: {integrity: sha512-ohcZYjzT4HkalgL7ZhTRHmRkHwLYp0RlPKFtD/ptvXugreu9lMK06A5NTEjCS+LkQ7yx1Egr0urv+baxKuukxw==}
+  /@ckeditor/ckeditor5-essentials@41.4.2:
+    resolution: {integrity: sha512-1UCvk76v2+NDfHfTo3Qg0EJYpddgSC/i66jY3NnQUFt1zt68rAzm/kFOVYjTD/QDn6pyiMAIUeMlKFkswF+upg==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -723,78 +723,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-find-and-replace@41.4.1:
-    resolution: {integrity: sha512-Un7by7t9uYT+IhDwFDpEjM/GrK77IQJsWfW6HwnJCgCjDo6Y3zxsQHctZL+nb0GvERaSHNyH/dDDrtKcS3Xb9A==}
+  /@ckeditor/ckeditor5-find-and-replace@41.4.2:
+    resolution: {integrity: sha512-y3JZF9UMgf6Zwt3HzaPI9B8Gbwc1s+IoK78LFuhkP9B/rgQDBFWi3fXo6ywHsHKZ/EK5JZQuHMdI9czyBuG29Q==}
     dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      ckeditor5: 41.4.1
-      lodash-es: 4.17.21
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-font@41.4.1:
-    resolution: {integrity: sha512-/I8bRR70vLhZbyB9m3snzSMH0uO3TWlDKuxkXu0mAVNUI2bSBMswjprYDlW2K6WpUgw0afJ436A7npZE1N7txg==}
-    dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-heading@41.4.1:
-    resolution: {integrity: sha512-xEZunJZqv+tr3/kWRYWP+8ePy179/YQntrPUTcAY7KuSwnsYv8Yl+JQhDUXAbnaFs02m18Leg/aHz1z05MO+0w==}
-    dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-highlight@41.4.1:
-    resolution: {integrity: sha512-K9K3c8VGK8YmgsVL3Xh/fE1zXeI7gwc0vTSRPpAAk3NTylQzhc5btZmCUyRhjw4ocLBW3UTfh/qCgvFc9rWVuA==}
-    dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-horizontal-line@41.4.1:
-    resolution: {integrity: sha512-1gehv/N5c4j1q3W/6mDEKrbk/rl/YBl/Q4WSv3d/MOe+NUDaJn65h43KUSYw0cEfH+rTfePhlljrnw/UJ47JYw==}
-    dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-html-embed@41.4.1:
-    resolution: {integrity: sha512-q5snyqsKe8ff5Vp29hrvgoW1kKYIALa4Fd2/Up4WRoE1XV+SiJYEmBSNSBKLYdkNEVud39fEqn/6GwJTk4gZ5Q==}
-    dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-html-support@41.4.1:
-    resolution: {integrity: sha512-poyt6AUqAQVXFyYIwBpcrWwMTi+SRTcoJYVozSVN4Vwu/hPv3nUKIGeMRMkHW33PUxqxA+wlitrppS31uSNgNQ==}
-    dependencies:
-      ckeditor5: 41.4.1
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -803,11 +736,65 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-image@41.4.1:
-    resolution: {integrity: sha512-uQ3+suGwe8g/Wi6moMbI52NCEx3N0XioTWY4bZFupPfywg24Lzgp50k2g3zrEO5blxV3lcg4tpkLj33Ol9UWEg==}
+  /@ckeditor/ckeditor5-font@41.4.2:
+    resolution: {integrity: sha512-++7oIK+MXtHGUQkqmXgZqGDBCEsHCuGkss43goGZ97PcRwLegnDRInowj3K/r3nwQcts1VAWnnLCnCSSYbcGIQ==}
     dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-heading@41.4.2:
+    resolution: {integrity: sha512-8AyMumy90nY49reQlHuCgSJFSaym4emCVF6vAAqd71FHtmgtfS9w3xMqXAk6QbgMjfy46cwind0JITZfBfKqLg==}
+    dependencies:
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-highlight@41.4.2:
+    resolution: {integrity: sha512-xAb3Kox0KfoenZaRWgWaZPQwYLauK46WdQ4zYJ16ozQN5mssnS8sU27EFx0OG5EOv9EBurmOcHnP3Rih1szROQ==}
+    dependencies:
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-horizontal-line@41.4.2:
+    resolution: {integrity: sha512-le+6melLc8lQTPBWppnWXWaX16KXcvXz8ZOO4uuD7+w5JrtRheEG1N35nTblpeT+QcyBjL9mSu519xReL2qjBA==}
+    dependencies:
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-html-embed@41.4.2:
+    resolution: {integrity: sha512-rpQMp6ckpYPWnBg8vL23SdKfJ0F80C1iIIO7EA9ZyimPc+hWH7kVF7f8D2Q2ckG1LrlXAXn9cg4tahMFGeiSzw==}
+    dependencies:
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-html-support@41.4.2:
+    resolution: {integrity: sha512-QHqFgzQucCRvEOPdxcXOMervxhlK6DiR6JqUvgeJyyiWWQT0HGiG7Vy7QKhL6S0w5BUYFoS5B8rj5LjOEm+xsg==}
+    dependencies:
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -816,33 +803,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-indent@41.4.1:
-    resolution: {integrity: sha512-YCKOy3Kby5Uev0HmkcT9cpp2nWPbsKXcywoC9KVapzxtdT8d5100uV8O19NvFu9xinNlnBuOQP8SyiR2DDGVNQ==}
+  /@ckeditor/ckeditor5-image@41.4.2:
+    resolution: {integrity: sha512-4AgXdvYr6tGzEqwAHVRl+LA8nPRER7vQthVBuT4g1FEkRB6w9kgRsPM2JfsGekoGd8GU0WnMaz8kAcL4C2urYg==}
     dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-language@41.4.1:
-    resolution: {integrity: sha512-X6A5Od2lOXSORkzRXLFVFpGpjKEh4Azg/xVfO8z7Xgob5XeBd7Aeoa0nZbFA+GJKtCTFjUQPWR1bRZpU/i1WCA==}
-    dependencies:
-      ckeditor5: 41.4.1
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: false
-
-  /@ckeditor/ckeditor5-link@41.4.1:
-    resolution: {integrity: sha512-PozxaOrgoBKKfDaU/2722x+DOhSxprH4KGjj7rdpE8EMXoibHckAKGgzIqQYJgJt3NSAgWHYl03xQFFtr2Vhig==}
-    dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      ckeditor5: 41.4.1
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -851,10 +816,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-list@41.4.1:
-    resolution: {integrity: sha512-AbXCmSYjvXdNF4rMF068ij9Fn5rJsSVW97wvYZ36UZoJcTpdnK0G3SZZCtkPV1kFQRN0J6Nkg9+7QsbznKasTA==}
+  /@ckeditor/ckeditor5-indent@41.4.2:
+    resolution: {integrity: sha512-pghHa+DKya6788nTiU1ZItKmAgjf+up4Rqe5GOkxKB7vJc189KSBJYc5foov65nM831rXcWgTk4jybK+JGHmjQ==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -862,10 +827,45 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-markdown-gfm@41.4.1:
-    resolution: {integrity: sha512-/3O2Y5u1P5xiQN/2z7T0264FBt59ZuYCRxr5VSFXJhdPIm2Qb76Ayn+MNmdxgt0KXubeKONDBGI5ppR+Fko96Q==}
+  /@ckeditor/ckeditor5-language@41.4.2:
+    resolution: {integrity: sha512-YrjwPRxtHDf99fnsbYxos/OuJcdEYYk4sx8oyVgwG/se0yk4IObx7MZGVebGiqd5cZQRxAxP8VGNgRqjHzpcsg==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-link@41.4.2:
+    resolution: {integrity: sha512-woMv9/BxkDjG5xsS/OyaxW9tWTuiG6wZWWcYxVJq8FOW2NL68CKQLmyoQ1rdv/2Gw4UPUXTtB+1uGVmQDMXDsQ==}
+    dependencies:
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      ckeditor5: 41.4.2
+      lodash-es: 4.17.21
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-list@41.4.2:
+    resolution: {integrity: sha512-nGb36jNJO6YAU35piKabey9B13xw6TnmL5VySS2dEqSt/DTy7RdY5z2K7CU/NGuIGe/bPBZgU1J0dQkRr2F3hA==}
+    dependencies:
+      ckeditor5: 41.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /@ckeditor/ckeditor5-markdown-gfm@41.4.2:
+    resolution: {integrity: sha512-4izHzZ2AO9QMo+WirGVPYu3qqf+YuYe0CtF37rhdRNFLwDMYV7lGBpEj24US/3lV7CuEKM1V5N2Ojl6b4ew10w==}
+    dependencies:
+      ckeditor5: 41.4.2
       marked: 4.0.12
       turndown: 6.0.0
       turndown-plugin-gfm: 1.0.2
@@ -876,11 +876,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-media-embed@41.4.1:
-    resolution: {integrity: sha512-0HVwhFJ3uhQrJyzU6FD38a/mC2C7nRW96H5Hl7tEPJ13PoOO+gKhqCSvwJmLZqkmAX5jZuS6Ji/gZfdK3wsWjg==}
+  /@ckeditor/ckeditor5-media-embed@41.4.2:
+    resolution: {integrity: sha512-+4JqfbnMrB9Si2gAKKCRZTY1hixlk11mY8+PA+32UezyCq/myoAlVGT8ytCr3rywe58nbkGGAv2QbVo6fy8zoQ==}
     dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      ckeditor5: 41.4.1
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -888,10 +888,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-mention@41.4.1:
-    resolution: {integrity: sha512-IKvix1m9BiOh1CmxXtm1/5qZ0QHIfmUZ0P/g4uNXnSf9YB/lsAM4nj0noZM8lFpVc5DIR4MHuFKD8YcQJn4Ouw==}
+  /@ckeditor/ckeditor5-mention@41.4.2:
+    resolution: {integrity: sha512-jO8eZE/4NIRJ5Tm/mIdgnLqkBnYj7l3jU4HZLkYvU5tEV5Xk6Rf8bsqMkkBvquf3LVhQbwAiLNjtlrHf68vU7Q==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     transitivePeerDependencies:
       - bufferutil
@@ -900,10 +900,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-minimap@41.4.1:
-    resolution: {integrity: sha512-hpi3simuNU1CW2KTB+yg23msYtfHG72H5xGlEo5MfI5K0ZX9Xr5VplhygiTMGzPQlJ/X3ueDuysfb88+nXaMlQ==}
+  /@ckeditor/ckeditor5-minimap@41.4.2:
+    resolution: {integrity: sha512-SJUHeD6l6UVFlY/Uh2vZIr7qHbz5A4Ud285zxAZpiiiv0NP4wQDw6bo28tD/QkCMm1hRcLCkKWd1aNDkFe+42w==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -911,10 +911,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-page-break@41.4.1:
-    resolution: {integrity: sha512-0t+k+UEAs0ztbrCPNIvAxNqY46raYoons2d+uSF+GT8GnPuK/a7AL3ZO02retXYYVBnmqijc0attuUuM5IR7sg==}
+  /@ckeditor/ckeditor5-page-break@41.4.2:
+    resolution: {integrity: sha512-J9sIBgBKhAeZn+KpZADUj6z7VjrbUtHHFL88Ivx2h9jePZPT/LIfDwnnrJEnMjf2KF1bkHvIdP23cZz2BzXwKg==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -922,18 +922,18 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-paragraph@41.4.1:
-    resolution: {integrity: sha512-mR6p+ODlVXC2eLkLPC4udVDO3byXvo0WTvQQOTFU3fSHUUF39Bcvx2fnq1d+v8I9iLgLZ0Ug2BmX9cBLeGmg2A==}
+  /@ckeditor/ckeditor5-paragraph@41.4.2:
+    resolution: {integrity: sha512-tOsD40Fcqli5zkH/68WhcqYU8BL4qb8J5xGuk1xmBokz3W0LzebWW0GXmFk5PmWv+fg0dOXfSo8uMzb5ni+CuQ==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-paste-from-office@41.4.1:
-    resolution: {integrity: sha512-cad7RaZB9HtqdvSW6PHu7A60VaZubeDSVV1vomVcv3KWqwmy52jU50sZydEH5OnyS2L3juMq3F1dKMokRVtBFA==}
+  /@ckeditor/ckeditor5-paste-from-office@41.4.2:
+    resolution: {integrity: sha512-jby5YQ2QowGdDCshPq5Ej11wTFcBZP2dYhQTu6fRZRc+mdihKCILxh0rwBgBOCCf+buflx8RYp/WKd76Kcuq5g==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -941,10 +941,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-remove-format@41.4.1:
-    resolution: {integrity: sha512-pD/YJmc0IwZagXNkwbyvCuLfYrXCyVAVertoCjRHQ7n8/yTwGivqV/XzKgzsE6XuBAev1PHQTd3B2yiIw8GZfQ==}
+  /@ckeditor/ckeditor5-remove-format@41.4.2:
+    resolution: {integrity: sha512-XlCIvIETcWn6/6jfPhVzSqkXZ6fnU0iqqNlyKF67dStfc6vVc6Ut31P+f84SwAJA8ay553OUNyY14YZcoP2tLg==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -952,121 +952,121 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ckeditor/ckeditor5-restricted-editing@41.4.1:
-    resolution: {integrity: sha512-nD9lhaEba8iToma9N8wCmmob/fjsVjZvUbDrzl1Ds4KU5VEpsEdgiKmFAZjikjkS3hUGdA1UtIpd/3QKU6Uc/g==}
+  /@ckeditor/ckeditor5-restricted-editing@41.4.2:
+    resolution: {integrity: sha512-t34VNBZbxO07nEazAKECXcRgH5VrPbrTJW0iZO0/w/yPHUAPZ8ejcdEuohr7cLS3TCHE09biFc1lNPLas/xK5w==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-select-all@41.4.1:
-    resolution: {integrity: sha512-DqgZHzjEZlHZndqC7G08TrkknSRo6vvTJ5qDzdpMNJfZ/leo/rcKw8PVjwANCvMopcwghsfg04DfCyk+q9CoAg==}
+  /@ckeditor/ckeditor5-select-all@41.4.2:
+    resolution: {integrity: sha512-zC0wS0IggFDvk1wDB/SregfejLJk62In+i7P0otOaySg5tFfkJqT3OycplbPqIn3D1UCpIIz4KJzRl66PEVI7g==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-show-blocks@41.4.1:
-    resolution: {integrity: sha512-7o40X/oQvJyT3aAuazJzxxttSKwT81b1y8ZdncxEWkeU/M+2tSTkkjyzztJP/FD82ULKsocWqcrmQBSsLj4HTg==}
+  /@ckeditor/ckeditor5-show-blocks@41.4.2:
+    resolution: {integrity: sha512-0mKErojbxNr8Xbx5OjDLdciU3Onwn33h5IMU2j6imcwqORLzyXgU9ENhwwfw6Roeu8Guvi6hEVKBW6GE1UIYIQ==}
     dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      ckeditor5: 41.4.1
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      ckeditor5: 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-source-editing@41.4.1:
-    resolution: {integrity: sha512-xqBOHEfEGJmEBlDy/I9g6V+VVHSy9XY/gKPZukLxK31aFtbo4WmLOApiUQzUtqsqTZaExeLy+9dhg9Okw0+0PA==}
+  /@ckeditor/ckeditor5-source-editing@41.4.2:
+    resolution: {integrity: sha512-TnBJLLEU5dckalm8KZP/xC0kLMeNDVTrWUp8iCLcmLoe9xlt/wIO8VzLVPW+WjgzSZ7Yq+vrzHaCyJRVxuDsBQ==}
     dependencies:
-      '@ckeditor/ckeditor5-theme-lark': 41.4.1
-      ckeditor5: 41.4.1
+      '@ckeditor/ckeditor5-theme-lark': 41.4.2
+      ckeditor5: 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-special-characters@41.4.1:
-    resolution: {integrity: sha512-6bCM3oHhPbfi7EEZSfiBWqTpKZ1tfTDB2iW81OPCYYGTQwc0PFogrfe1mtie1POlWelD+mO8P41o70GfOQ3Ysg==}
+  /@ckeditor/ckeditor5-special-characters@41.4.2:
+    resolution: {integrity: sha512-OicpKzkYqyTjPRGZf6xMYQnuUCAZ4QS2H1MAEH5xTiwYv+eqR/enC/m9FxCEs2Z3DlO9DIjVnoBxe2qUCSxRBQ==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-style@41.4.1:
-    resolution: {integrity: sha512-3GqGGrbIHkCNW10ctbIfloG6Dqxz9tO2GRJaqXZSQvk6i+MhZW/ytfb1Kyse+y5aJrSYXqwxZlwpV9+re+QF9g==}
+  /@ckeditor/ckeditor5-style@41.4.2:
+    resolution: {integrity: sha512-q39mtg1kBrmJ8XA7XbOy4HhVzrICvt0KS484d5c3NaX7JetwapAM/QfWDGfMToMukzFcntaGt0be5Bwja0LJSw==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     dev: false
 
-  /@ckeditor/ckeditor5-table@41.4.1:
-    resolution: {integrity: sha512-4hI0FFH9Zvr9qdrFxnt5tovMgPOE0AfLhFQu3SZx2TLdSkpPwP4a+H/ucyMwuuiiCa8aAHchq2sqs6WXI0qZvA==}
+  /@ckeditor/ckeditor5-table@41.4.2:
+    resolution: {integrity: sha512-wDn1UUaKHcrscmTYj2PwCFbj9FOXFfhk4JbCepyGFQt31YyaOKBzAyZaJQ7E38wJq7a4afac3MwUDk+j1X5FDw==}
     dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      ckeditor5: 41.4.1
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     dev: false
 
-  /@ckeditor/ckeditor5-theme-lark@41.4.1:
-    resolution: {integrity: sha512-CcM84uFMh06wQTzu+Sah9WjFNJCcOvxz98nssazuA74j5gFLNaEnobaGUhgxpX57waC6yRH6V1o0KYFZBPpd/Q==}
+  /@ckeditor/ckeditor5-theme-lark@41.4.2:
+    resolution: {integrity: sha512-rzFSAhdPMD2QylJDwgGniiBoCuHWQAQIEKDtMbQ4FH+/7JiCfKgUsnZxqhDPJwQyV1MWVz4wmXK/1RKqHohOvg==}
     dependencies:
-      '@ckeditor/ckeditor5-ui': 41.4.1
+      '@ckeditor/ckeditor5-ui': 41.4.2
 
-  /@ckeditor/ckeditor5-typing@41.4.1:
-    resolution: {integrity: sha512-K6wHZvDJBWqHa7b+FCV+nNg2B1TZqb/zhki+xxP484M3ro7kHUoJJ7zSEhH9OjUckKs1jBo9NvJfkMnuFWEx4g==}
+  /@ckeditor/ckeditor5-typing@41.4.2:
+    resolution: {integrity: sha512-dXP+uNl+jkfrSIqMNai2yakR/3JqJ9g0M9WwwnV5vzbEOKD4YKP5+ixvqKb39dwLCLZ4mGpJaX+rjNXBExjSIw==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
       lodash-es: 4.17.21
     dev: false
 
-  /@ckeditor/ckeditor5-ui@41.4.1:
-    resolution: {integrity: sha512-NuLa45LD2XYbBgE4VVBccggQ0FVy1OXtngr4grh9LWHf1EQNiFRZEm+bHc4kLnM6JmVsSHZraYuCm/7KjRMmKw==}
+  /@ckeditor/ckeditor5-ui@41.4.2:
+    resolution: {integrity: sha512-wvRbDXJN8PmaWyB0H487DjvdH2ayMyN52+WLkZlVbhX9ICb1sf5XnLz4v/wXeQ4W8JbWdsg2FZIDDQDeXjvyJw==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
       color-convert: 2.0.1
       color-parse: 1.4.2
       lodash-es: 4.17.21
       vanilla-colorful: 0.7.2
 
-  /@ckeditor/ckeditor5-undo@41.4.1:
-    resolution: {integrity: sha512-UILJXqoHHkmTHz0snF2qR0OfjyfofCLFTP2z1P1T5Zjo+FkwHK3nlE9r9D4aVtdBii1jaM3DhzQ5+gwSX3ELPg==}
+  /@ckeditor/ckeditor5-undo@41.4.2:
+    resolution: {integrity: sha512-mJMoALRWAaFg9Jgu+ufSGR/cUGCawMcz7Iwr5TBdrICmIckxx0DxPwWCPoTgI1laBZtRy/QctO2gQ4H+FYbfUw==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-upload@41.4.1:
-    resolution: {integrity: sha512-qYGZKQHfqFD22BfTb0Ph6izBLSTViyy9kuJSWcISB914fm9ktycUwv0amZJGIbo60jqZ5VBmadljEGKhBM6jXQ==}
+  /@ckeditor/ckeditor5-upload@41.4.2:
+    resolution: {integrity: sha512-dCNQhZw9QcgGUKlYD8STpgNanNp7ILPMRNoDFW9NWHRKsUpjGMYIU3dsE4f08hkA/bckJ9yBaZc7a0LavOrncw==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
     dev: false
 
-  /@ckeditor/ckeditor5-utils@41.4.1:
-    resolution: {integrity: sha512-g8M2802mQM4BV+5NLA1VlC4sRkLottV+SQoVwIHFydw3zGACo7UxO8i1QQBOcqBTvwYNGg9BOPoInpbDXuuJIg==}
+  /@ckeditor/ckeditor5-utils@41.4.2:
+    resolution: {integrity: sha512-VgLr2eLVggyhDqa7H8JUxpnOLTZ0R/YuDZ6ENVUumd9q4VrpNs94ZK0Y/Shp7UmuHQ/sTth+PWTsi+t5KwYqeQ==}
     dependencies:
       lodash-es: 4.17.21
 
-  /@ckeditor/ckeditor5-watchdog@41.4.1:
-    resolution: {integrity: sha512-TTk3ODm8IUHxI9rzvlQ9oO0cH4pIeasOnZGN/Az1FiiuCXdrs62K+Df7+u1RaAaQrhSXaS6uPbDazR8esTXgjQ==}
+  /@ckeditor/ckeditor5-watchdog@41.4.2:
+    resolution: {integrity: sha512-u17Y8XHhyDHaShQei7WuZ0th8DgKo56YfJqRdZautHKnPJ32r+O97uTcGfBpsobhZbJ6Ss3tUwebve3Obv2K/w==}
     dependencies:
       lodash-es: 4.17.21
     dev: false
 
-  /@ckeditor/ckeditor5-widget@41.4.1:
-    resolution: {integrity: sha512-dRDpbAoJoY9Go81FURTTiWKjMLxKERZOdecpW2I3W5Z52cEoccroURdYkeejTX+XNINwb5dXNBym9Z1Hce8NAg==}
+  /@ckeditor/ckeditor5-widget@41.4.2:
+    resolution: {integrity: sha512-hpM9Ti2iFvBBIPAESJp3bOY4SR6fzF3V5t46CpVDStLJdqwnQOuZ8Nv1dqzZZWCuK+EByAbY14pgfYM92nNHrQ==}
     dependencies:
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-enter': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-enter': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
       lodash-es: 4.17.21
     dev: false
 
-  /@ckeditor/ckeditor5-word-count@41.4.1:
-    resolution: {integrity: sha512-dtGijAVwl5bU4yuoU4zMhmz4gV4u4aRKQ2yxfEE4hoXL7JfjMRCSpIGARd/LavRMUjqJaLVVm+V+nVaIRBV7ew==}
+  /@ckeditor/ckeditor5-word-count@41.4.2:
+    resolution: {integrity: sha512-XuCLL97FotJ9QfuCZOhW7V2XHfVXkplIDpwgnH4HnLjtMLGFVZbyb0k9pEJk3Kp+F8qQbfWDIPFzaNKRDKqtRA==}
     dependencies:
-      ckeditor5: 41.4.1
+      ckeditor5: 41.4.2
       lodash-es: 4.17.21
     dev: false
 
@@ -2472,72 +2472,72 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ckeditor5@41.4.1:
-    resolution: {integrity: sha512-XK3ED7meT9xNuIikPBq8kblIZyYhO9+m+z6ZxOzeyPiInQcB0Brdf9kkeg4TnRS5B/9b5I9oB9x9ASir45WL5g==}
+  /ckeditor5@41.4.2:
+    resolution: {integrity: sha512-90k7d3R1B7x3muHOKKOGIomFsSQRG1sPuRHdN6J7WmKZH+BrMQgRkUs66xVRhNjrLPmewwJYdQI42Sb1cA1ILQ==}
     dependencies:
-      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-alignment': 41.4.1
-      '@ckeditor/ckeditor5-autoformat': 41.4.1
-      '@ckeditor/ckeditor5-autosave': 41.4.1
-      '@ckeditor/ckeditor5-basic-styles': 41.4.1
-      '@ckeditor/ckeditor5-block-quote': 41.4.1
-      '@ckeditor/ckeditor5-build-balloon': 41.4.1
-      '@ckeditor/ckeditor5-build-balloon-block': 41.4.1
-      '@ckeditor/ckeditor5-build-classic': 41.4.1
-      '@ckeditor/ckeditor5-build-decoupled-document': 41.4.1
-      '@ckeditor/ckeditor5-build-inline': 41.4.1
-      '@ckeditor/ckeditor5-build-multi-root': 41.4.1
-      '@ckeditor/ckeditor5-ckbox': 41.4.1
-      '@ckeditor/ckeditor5-ckfinder': 41.4.1
-      '@ckeditor/ckeditor5-clipboard': 41.4.1
-      '@ckeditor/ckeditor5-cloud-services': 41.4.1
-      '@ckeditor/ckeditor5-code-block': 41.4.1
-      '@ckeditor/ckeditor5-core': 41.4.1
-      '@ckeditor/ckeditor5-easy-image': 41.4.1
-      '@ckeditor/ckeditor5-editor-balloon': 41.4.1
-      '@ckeditor/ckeditor5-editor-classic': 41.4.1
-      '@ckeditor/ckeditor5-editor-decoupled': 41.4.1
-      '@ckeditor/ckeditor5-editor-inline': 41.4.1
-      '@ckeditor/ckeditor5-editor-multi-root': 41.4.1
-      '@ckeditor/ckeditor5-engine': 41.4.1
-      '@ckeditor/ckeditor5-enter': 41.4.1
-      '@ckeditor/ckeditor5-essentials': 41.4.1
-      '@ckeditor/ckeditor5-find-and-replace': 41.4.1
-      '@ckeditor/ckeditor5-font': 41.4.1
-      '@ckeditor/ckeditor5-heading': 41.4.1
-      '@ckeditor/ckeditor5-highlight': 41.4.1
-      '@ckeditor/ckeditor5-horizontal-line': 41.4.1
-      '@ckeditor/ckeditor5-html-embed': 41.4.1
-      '@ckeditor/ckeditor5-html-support': 41.4.1
-      '@ckeditor/ckeditor5-image': 41.4.1
-      '@ckeditor/ckeditor5-indent': 41.4.1
-      '@ckeditor/ckeditor5-language': 41.4.1
-      '@ckeditor/ckeditor5-link': 41.4.1
-      '@ckeditor/ckeditor5-list': 41.4.1
-      '@ckeditor/ckeditor5-markdown-gfm': 41.4.1
-      '@ckeditor/ckeditor5-media-embed': 41.4.1
-      '@ckeditor/ckeditor5-mention': 41.4.1
-      '@ckeditor/ckeditor5-minimap': 41.4.1
-      '@ckeditor/ckeditor5-page-break': 41.4.1
-      '@ckeditor/ckeditor5-paragraph': 41.4.1
-      '@ckeditor/ckeditor5-paste-from-office': 41.4.1
-      '@ckeditor/ckeditor5-remove-format': 41.4.1
-      '@ckeditor/ckeditor5-restricted-editing': 41.4.1
-      '@ckeditor/ckeditor5-select-all': 41.4.1
-      '@ckeditor/ckeditor5-show-blocks': 41.4.1
-      '@ckeditor/ckeditor5-source-editing': 41.4.1
-      '@ckeditor/ckeditor5-special-characters': 41.4.1
-      '@ckeditor/ckeditor5-style': 41.4.1
-      '@ckeditor/ckeditor5-table': 41.4.1
-      '@ckeditor/ckeditor5-theme-lark': 41.4.1
-      '@ckeditor/ckeditor5-typing': 41.4.1
-      '@ckeditor/ckeditor5-ui': 41.4.1
-      '@ckeditor/ckeditor5-undo': 41.4.1
-      '@ckeditor/ckeditor5-upload': 41.4.1
-      '@ckeditor/ckeditor5-utils': 41.4.1
-      '@ckeditor/ckeditor5-watchdog': 41.4.1
-      '@ckeditor/ckeditor5-widget': 41.4.1
-      '@ckeditor/ckeditor5-word-count': 41.4.1
+      '@ckeditor/ckeditor5-adapter-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-alignment': 41.4.2
+      '@ckeditor/ckeditor5-autoformat': 41.4.2
+      '@ckeditor/ckeditor5-autosave': 41.4.2
+      '@ckeditor/ckeditor5-basic-styles': 41.4.2
+      '@ckeditor/ckeditor5-block-quote': 41.4.2
+      '@ckeditor/ckeditor5-build-balloon': 41.4.2
+      '@ckeditor/ckeditor5-build-balloon-block': 41.4.2
+      '@ckeditor/ckeditor5-build-classic': 41.4.2
+      '@ckeditor/ckeditor5-build-decoupled-document': 41.4.2
+      '@ckeditor/ckeditor5-build-inline': 41.4.2
+      '@ckeditor/ckeditor5-build-multi-root': 41.4.2
+      '@ckeditor/ckeditor5-ckbox': 41.4.2
+      '@ckeditor/ckeditor5-ckfinder': 41.4.2
+      '@ckeditor/ckeditor5-clipboard': 41.4.2
+      '@ckeditor/ckeditor5-cloud-services': 41.4.2
+      '@ckeditor/ckeditor5-code-block': 41.4.2
+      '@ckeditor/ckeditor5-core': 41.4.2
+      '@ckeditor/ckeditor5-easy-image': 41.4.2
+      '@ckeditor/ckeditor5-editor-balloon': 41.4.2
+      '@ckeditor/ckeditor5-editor-classic': 41.4.2
+      '@ckeditor/ckeditor5-editor-decoupled': 41.4.2
+      '@ckeditor/ckeditor5-editor-inline': 41.4.2
+      '@ckeditor/ckeditor5-editor-multi-root': 41.4.2
+      '@ckeditor/ckeditor5-engine': 41.4.2
+      '@ckeditor/ckeditor5-enter': 41.4.2
+      '@ckeditor/ckeditor5-essentials': 41.4.2
+      '@ckeditor/ckeditor5-find-and-replace': 41.4.2
+      '@ckeditor/ckeditor5-font': 41.4.2
+      '@ckeditor/ckeditor5-heading': 41.4.2
+      '@ckeditor/ckeditor5-highlight': 41.4.2
+      '@ckeditor/ckeditor5-horizontal-line': 41.4.2
+      '@ckeditor/ckeditor5-html-embed': 41.4.2
+      '@ckeditor/ckeditor5-html-support': 41.4.2
+      '@ckeditor/ckeditor5-image': 41.4.2
+      '@ckeditor/ckeditor5-indent': 41.4.2
+      '@ckeditor/ckeditor5-language': 41.4.2
+      '@ckeditor/ckeditor5-link': 41.4.2
+      '@ckeditor/ckeditor5-list': 41.4.2
+      '@ckeditor/ckeditor5-markdown-gfm': 41.4.2
+      '@ckeditor/ckeditor5-media-embed': 41.4.2
+      '@ckeditor/ckeditor5-mention': 41.4.2
+      '@ckeditor/ckeditor5-minimap': 41.4.2
+      '@ckeditor/ckeditor5-page-break': 41.4.2
+      '@ckeditor/ckeditor5-paragraph': 41.4.2
+      '@ckeditor/ckeditor5-paste-from-office': 41.4.2
+      '@ckeditor/ckeditor5-remove-format': 41.4.2
+      '@ckeditor/ckeditor5-restricted-editing': 41.4.2
+      '@ckeditor/ckeditor5-select-all': 41.4.2
+      '@ckeditor/ckeditor5-show-blocks': 41.4.2
+      '@ckeditor/ckeditor5-source-editing': 41.4.2
+      '@ckeditor/ckeditor5-special-characters': 41.4.2
+      '@ckeditor/ckeditor5-style': 41.4.2
+      '@ckeditor/ckeditor5-table': 41.4.2
+      '@ckeditor/ckeditor5-theme-lark': 41.4.2
+      '@ckeditor/ckeditor5-typing': 41.4.2
+      '@ckeditor/ckeditor5-ui': 41.4.2
+      '@ckeditor/ckeditor5-undo': 41.4.2
+      '@ckeditor/ckeditor5-upload': 41.4.2
+      '@ckeditor/ckeditor5-utils': 41.4.2
+      '@ckeditor/ckeditor5-watchdog': 41.4.2
+      '@ckeditor/ckeditor5-widget': 41.4.2
+      '@ckeditor/ckeditor5-word-count': 41.4.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
