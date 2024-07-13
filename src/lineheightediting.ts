@@ -1,19 +1,13 @@
-import { type Editor, Plugin } from 'ckeditor5/src/core'
+import { type Editor, Plugin } from 'ckeditor5'
 
-import LineHeightCommand from './lineheightcommand'
-import { LINE_HEIGHT, buildDefinition, normalizeOptions } from './utils'
+import LineHeightCommand from './lineheightcommand.js'
+import { LINE_HEIGHT, buildDefinition, normalizeOptions } from './utils.js'
 
 export default class LineHeightEditing extends Plugin {
-  /**
-   * @inheritDoc
-   */
   public static get pluginName() {
     return 'LineHeightEditing' as const
   }
 
-  /**
-   * @inheritDoc
-   */
   constructor(editor: Editor) {
     super(editor)
 
@@ -23,9 +17,6 @@ export default class LineHeightEditing extends Plugin {
     })
   }
 
-  /**
-   * @inheritDoc
-   */
   public init(): void {
     const editor = this.editor
     const schema = editor.model.schema

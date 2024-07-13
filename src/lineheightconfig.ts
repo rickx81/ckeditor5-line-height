@@ -12,7 +12,7 @@ export interface LineHeightConfig {
    *
    * ```ts
    * const lineHeightConfig = {
-   *   options: [1, 1.5, 2, '14px', '16px', '18px', '20px', '22px', '24px']
+   *   options: ['default', '10px', 2, '150%', '8em', { title: 'Custom Title', model: '48px' }]
    * };
    * ```
    *
@@ -27,14 +27,14 @@ export interface LineHeightConfig {
    *       model: '1',
    *     },
    *     {
-   *        title: 'Huge',
-   *        model: '36px'
+   *        title: 'Custom Title',
+   *        model: '48px'
    *     },
    *   ]
    * };
    * ```
    *
-   * Font size can be applied using the command API. To do that, use the `'lineHeight'` command and pass the desired line-height as a `value`.
+   * Line height can be applied using the command API. To do that, use the `'lineHeight'` command and pass the desired line-height as a `value`.
    * For example, the following code will apply the `lineHeight` attribute with the **tiny** value to the current selection:
    *
    * ```ts

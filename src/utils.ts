@@ -1,6 +1,6 @@
-import type { AttributeDescriptor } from 'ckeditor5/src/engine'
+import type { AttributeDescriptor } from 'ckeditor5'
 
-import type { LineHeightOption } from './lineheightconfig'
+import type { LineHeightOption } from './lineheightconfig.js'
 
 /**
  * The name of the lineHeight plugin.

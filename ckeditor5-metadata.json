@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "name": "Line height",
+      "className": "LineHeight",
+      "description": "LineHeight plugin for CKEditor5.",
+      "path": "src/lineheight.ts",
+      "uiComponents": [
+        {
+          "name": "lineHeight",
+          "type": "Button",
+          "iconPath": "theme/icons/line-height.svg"
+        }
+      ]
+    }
+  ]
+}

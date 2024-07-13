@@ -1,23 +1,17 @@
-import { Plugin } from 'ckeditor5/src/core'
-import { Collection } from 'ckeditor5/src/utils'
-import { type ListDropdownItemDefinition, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5/src/ui'
+import { Collection, Plugin } from 'ckeditor5'
 
-import lineHeightIcon from '../theme/line-height.svg'
-import { LINE_HEIGHT, normalizeOptions } from './utils'
-import type { LineHeightOption } from './lineheightconfig'
-import type LineHeightCommand from './lineheightcommand'
+import { type ListDropdownItemDefinition, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5'
+
+import lineHeightIcon from './../theme/icons/line-height.svg'
+import { LINE_HEIGHT, normalizeOptions } from './utils.js'
+import type { LineHeightOption } from './lineheightconfig.js'
+import type LineHeightCommand from './lineheightcommand.js'
 
 export default class LineHeightUI extends Plugin {
-  /**
-   * @inheritDoc
-   */
   public static get pluginName() {
     return 'LineHeightUI' as const
   }
 
-  /**
-   * @inheritDoc
-   */
   public init(): void {
     const editor = this.editor
     const componentFactory = editor.ui.componentFactory
@@ -59,7 +53,7 @@ export default class LineHeightUI extends Plugin {
     })
   }
 
-  private _getLocalizedOptions(): LineHeightOption[] {
+  private _getLocalizedOptions(): Array<LineHeightOption> {
     const editor = this.editor
     const t = editor.t
 
@@ -83,7 +77,7 @@ export default class LineHeightUI extends Plugin {
 }
 
 // Prepares LineHeight dropdown items.
-function _prepareListOptions(options: LineHeightOption[], command: LineHeightCommand): Collection<ListDropdownItemDefinition> {
+function _prepareListOptions(options: Array<LineHeightOption>, command: LineHeightCommand): Collection<ListDropdownItemDefinition> {
   const itemDefinitions = new Collection<ListDropdownItemDefinition>()
 
   for (const option of options) {

@@ -1,19 +1,19 @@
-/*
- * The base configuration used by all other configuration.
- *
- * Be careful when updating this file. It may affect building docs, preparing DLLs, executing tests, or impacts the release process.
- */
 {
   "compilerOptions": {
     "target": "es2019",
     "lib": [
-      "ES2019", // Must match the "target"
+      "ES2019", // Must match the "target".
       "ES2020.String",
       "DOM",
       "DOM.Iterable"
     ],
-    "module": "es6",
-    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "typeRoots": [
+      "typings",
+      "node_modules/@types"
+    ],
     /**
      * TypeScript automagically loads typings from all "@types/*" packages if the "compilerOptions.types" array is not defined in
      * this file. However, if some dependencies have "@types/*" packages as their dependencies, they'll also be loaded as well.
@@ -27,13 +27,12 @@
     "strict": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
-    "declaration": true,
-    "outDir": "dist",
-    "sourceMap": false,
+    "sourceMap": true,
     "skipLibCheck": true
   },
   "include": [
-    "./src/",
-    "./types/"
+    "./sample",
+    "./src",
+    "./typings"
   ]
 }

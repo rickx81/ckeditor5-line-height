@@ -1,24 +1,14 @@
-import { Command, type Editor } from 'ckeditor5/src/core'
-import { first } from 'ckeditor5/src/utils'
-import type { Element, Writer } from 'ckeditor5/src/engine'
+import { Command, first } from 'ckeditor5'
+import type { Editor, Element, Writer } from 'ckeditor5'
 
-import { LINE_HEIGHT } from './utils'
+import { LINE_HEIGHT } from './utils.js'
 
 /**
  * The lineHeight command plugin.
  */
 export default class LineHeightCommand extends Command {
-  /**
-   * A value of the current block's lineHeight.
-   *
-   * @observable
-   * @readonly
-   */
   public declare value: string
 
-  /**
-   * @inheritDoc
-   */
   public static get pluginName() {
     return 'LineHeightEditing' as const
   }
@@ -27,9 +17,6 @@ export default class LineHeightCommand extends Command {
     super(editor)
   }
 
-  /**
-   * @inheritDoc
-   */
   public override refresh(): void {
     const model = this.editor.model
     const document = model.document

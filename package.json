@@ -1,50 +1,86 @@
 {
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
-  "version": "41.4.2",
+  "version": "42.0.0-beta.1",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
-  "license": "GPL-2.0-or-later",
+  "license": "MIT",
   "homepage": "https://github.com/rickx81/ckeditor5-line-height",
   "repository": {
     "type": "git",
     "url": "https://github.com/rickx81/ckeditor5-line-height.git"
   },
   "bugs": "https://github.com/rickx81/ckeditor5-line-height/issues",
-  "main": "src/index.ts",
-  "types": "dist/index.d.ts",
-  "files": [
-    "build",
-    "dist",
-    "lang",
-    "src",
-    "theme"
+  "keywords": [
+    "ckeditor",
+    "ckeditor-line-height",
+    "ckeditor5-line-height",
+    "ckeditor5",
+    "ckeditor 5",
+    "ckeditor5-feature",
+    "ckeditor5-plugin",
+    "ckeditor5-line-height",
+    "ckeditor5-package-generator"
   ],
-  "scripts": {
-    "predll:build": "npm run build",
-    "dll:build": "webpack",
-    "build": "tsc -p ./tsconfig.json",
-    "release": "npm run dll:build && node ./scripts/updatePackageEntryPoint.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./translations/*.js": {
+      "types": "./dist/translations/*.d.ts",
+      "import": "./dist/translations/*.js"
+    },
+    "./*.css": "./dist/*.css",
+    "./package.json": "./package.json"
   },
-  "dependencies": {
-    "ckeditor5": "41.4.2"
+  "main": "dist/index.ts",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "ckeditor5-metadata.json",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8"
+  },
+  "scripts": {
+    "build:dist": "node ./scripts/build-dist.mjs",
+    "ts:build": "tsc -p ./tsconfig.release.json",
+    "ts:clear": "npx rimraf \"src/**/*.@(js|d.ts)\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "ckeditor5-package-tools start",
+    "test": "ckeditor5-package-tools test",
+    "prepare": "husky && npm run build:dist",
+    "prepublishOnly": "npm run ts:build && ckeditor5-package-tools export-package-as-javascript",
+    "postpublish": "npm run ts:clear && ckeditor5-package-tools export-package-as-typescript",
+    "translations:collect": "ckeditor5-package-tools translations:collect",
+    "translations:download": "ckeditor5-package-tools translations:download",
+    "translations:upload": "ckeditor5-package-tools translations:upload"
+  },
+  "peerDependencies": {
+    "ckeditor5": ">=42.0.0 || ^0.0.0-nightly"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "~2.21.3",
-    "@ckeditor/ckeditor5-core": "41.4.2",
-    "@ckeditor/ckeditor5-dev-utils": "^39.9.1",
-    "@ckeditor/ckeditor5-theme-lark": "41.4.2",
-    "css-loader": "^6.11.0",
-    "esbuild-loader": "^4.2.0",
+    "@antfu/eslint-config": "~2.21.0",
+    "@ckeditor/ckeditor5-core": "^42.0.0",
+    "@ckeditor/ckeditor5-dev-build-tools": "40.4.0",
+    "@ckeditor/ckeditor5-inspector": ">=4.1.0",
+    "@ckeditor/ckeditor5-package-tools": "^2.0.0",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "ckeditor5": "latest",
     "eslint": "^8.57.0",
-    "fs-extra": "^11.2.0",
-    "postcss-loader": "^7.3.4",
-    "raw-loader": "^4.0.2",
-    "style-loader": "^3.3.4",
-    "typescript": "^5.5.3",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
+    "eslint-config-ckeditor5": ">=6.0.0",
+    "http-server": "^14.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "ts-node": "^10.9.1",
+    "typescript": "5.0.4"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
