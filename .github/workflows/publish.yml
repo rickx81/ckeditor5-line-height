@@ -24,8 +24,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
       - name: Install Dependencies
-        run: npm install
+        run: pnpm i
 
       - name: Publish to NPM
         uses: JS-DevTools/npm-publish@v3

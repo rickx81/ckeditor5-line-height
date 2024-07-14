@@ -18,8 +18,12 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: npm
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
       - name: Install Dependencies
-        run: npm install
+        run: pnpm i
 
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
@@ -27,4 +31,4 @@ jobs:
           chrome-version: 120
 
       - name: Test
-        run: npm run test
+        run: pnpm test

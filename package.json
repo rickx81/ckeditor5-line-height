@@ -72,6 +72,7 @@
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "^20.14.10",
+    "chalk": "^4.1.2",
     "ckeditor5": "latest",
     "eslint": "^8.57.0",
     "eslint-config-ckeditor5": ">=6.0.0",
