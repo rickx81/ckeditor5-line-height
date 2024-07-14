@@ -18,15 +18,18 @@ yarn add @rickx/ckeditor5-line-height
 npm i @rickx/ckeditor5-line-height
 ```
 
+### [How to use your plugin in new installation methods?](https://ckeditor.com/docs/ckeditor5/latest/updating/nim-migration/custom-plugins.html#how-to-use-your-plugin-in-new-installation-methods)
+
 Use it in your application:
 
 ```ts
-import { LineHeight } from '@rickx/ckeditor5-line-height'
-```
+// Importing ClassicEditor
+import { ClassicEditor } from 'ckeditor5'
 
-[Loading additional languages from npm or CDN](https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/ui-language.html#loading-additional-languages-from-npm-or-cdn)
-``` ts
-import coreTranslations from 'ckeditor5/translations/zh-cn.js'
+// Importing the plugin code.
+import { LineHeight } from '@rickx/ckeditor5-line-height'
+
+// Optionally importing the translations.
 import lineHeightTranslations from '@rickx/ckeditor5-line-height/translations/zh-cn.js'
 ```
 
@@ -59,7 +62,7 @@ ClassicEditor
       'lineHeight', // add the button to your toolbar
     ],
     transitions: [
-      coreTranslations, // core translations
+      /* ..., */
       lineHeightTranslations, // line-height translations
     ]
   })
