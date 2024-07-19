@@ -41,10 +41,6 @@
     "ckeditor5-metadata.json",
     "dist"
   ],
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8"
-  },
   "scripts": {
     "build:dist": "node ./scripts/build-dist.mjs",
     "ts:build": "tsc -p ./tsconfig.release.json",
@@ -75,11 +71,8 @@
     "chalk": "^4.1.2",
     "ckeditor5": "latest",
     "eslint": "^8.57.0",
-    "eslint-config-ckeditor5": ">=6.0.0",
-    "http-server": "^14.1.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "ts-node": "^10.9.1",
     "typescript": "5.0.4"
   },
   "lint-staged": {
