@@ -16,11 +16,10 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          cache: npm
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
 
       - name: Install Dependencies
         run: pnpm i
