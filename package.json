@@ -1,7 +1,7 @@
 {
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
-  "version": "42.0.1",
+  "version": "43.0.0",
   "packageManager": "pnpm@9.12.0",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
