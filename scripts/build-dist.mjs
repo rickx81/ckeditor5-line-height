@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { createRequire } from 'node:module'
 import process from 'node:process'
-import upath from 'upath'
-import chalk from 'chalk'
 import { build } from '@ckeditor/ckeditor5-dev-build-tools'
+import chalk from 'chalk'
+import upath from 'upath'
 
 function dist(path) {
   return upath.join('dist', path)

@@ -1,5 +1,5 @@
-import { expect } from 'chai'
 import type { Model } from 'ckeditor5'
+import { expect } from 'chai'
 import { ClassicEditor, Paragraph, _getModelData, _setModelData } from 'ckeditor5'
 
 import { LineHeightEditing } from '../src/index.js'

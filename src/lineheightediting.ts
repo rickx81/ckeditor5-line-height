@@ -1,7 +1,7 @@
 import { type Editor, Plugin } from 'ckeditor5'
 
 import LineHeightCommand from './lineheightcommand.js'
-import { LINE_HEIGHT, buildDefinition, normalizeOptions } from './utils.js'
+import { buildDefinition, LINE_HEIGHT, normalizeOptions } from './utils.js'
 
 export default class LineHeightEditing extends Plugin {
   public static get pluginName() {

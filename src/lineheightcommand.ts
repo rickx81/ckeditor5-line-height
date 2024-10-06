@@ -1,5 +1,5 @@
-import { Command, first } from 'ckeditor5'
 import type { Editor, Element, Writer } from 'ckeditor5'
+import { Command, first } from 'ckeditor5'
 
 import { LINE_HEIGHT } from './utils.js'
 

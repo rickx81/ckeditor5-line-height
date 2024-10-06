@@ -1,11 +1,11 @@
 import { Collection, Plugin } from 'ckeditor5'
-
 import { type ListDropdownItemDefinition, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5'
+import type LineHeightCommand from './lineheightcommand.js'
+
+import type { LineHeightOption } from './lineheightconfig.js'
 
 import lineHeightIcon from './../theme/icons/line-height.svg'
 import { LINE_HEIGHT, normalizeOptions } from './utils.js'
-import type { LineHeightOption } from './lineheightconfig.js'
-import type LineHeightCommand from './lineheightcommand.js'
 
 export default class LineHeightUI extends Plugin {
   public static get pluginName() {

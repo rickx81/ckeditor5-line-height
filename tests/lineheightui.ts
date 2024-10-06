@@ -1,5 +1,5 @@
-import { expect } from 'chai'
 import type { ButtonView, DropdownView, ListItemView } from 'ckeditor5'
+import { expect } from 'chai'
 import { ClassicEditor } from 'ckeditor5'
 
 import type { LineHeightCommand } from '../src/index.js'

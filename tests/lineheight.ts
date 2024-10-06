@@ -1,9 +1,7 @@
 import { expect } from 'chai'
 import { ClassicEditor } from 'ckeditor5'
 
-import LineHeight from '../src/lineheight.js'
-import LineHeightEditing from '../src/lineheightediting.js'
-import LineHeightUI from '../src/lineheightui.js'
+import { LineHeight, LineHeightEditing, LineHeightUI } from '../src/index.js'
 
 describe('LineHeight', () => {
   it('requires LineHeightEditing & LineHeightUI', () => {

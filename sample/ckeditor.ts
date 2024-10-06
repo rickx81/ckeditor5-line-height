@@ -1,3 +1,4 @@
+import CKEditorInspector from '@ckeditor/ckeditor5-inspector'
 import {
   Autoformat,
   Base64UploadAdapter,
@@ -22,9 +23,8 @@ import {
   Table,
   TableToolbar,
 } from 'ckeditor5'
-import coreTranslations from 'ckeditor5/translations/zh-cn.js'
 
-import CKEditorInspector from '@ckeditor/ckeditor5-inspector'
+import coreTranslations from 'ckeditor5/translations/zh-cn.js'
 
 import LineHeight from '../src/lineheight.js'
 // eslint-disable-next-line antfu/no-import-dist
