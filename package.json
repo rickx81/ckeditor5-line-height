@@ -2,7 +2,7 @@
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
   "version": "43.3.1",
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.15.0",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
   "license": "MIT",
@@ -25,14 +25,11 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./translations/*.js": {
-      "types": "./dist/translations/*.d.ts",
-      "import": "./dist/translations/*.js"
-    },
-    "./*.css": "./dist/*.css",
+    "./*": "./dist/*",
+    "./browser/*": null,
     "./package.json": "./package.json"
   },
   "main": "dist/index.ts",
@@ -42,20 +39,24 @@
     "ckeditor5-metadata.json",
     "dist"
   ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=5.7.1"
+  },
   "scripts": {
     "build:dist": "node ./scripts/build-dist.mjs",
     "ts:build": "tsc -p ./tsconfig.release.json",
-    "ts:clear": "npx rimraf \"src/**/*.@(js|d.ts)\"",
+    "ts:clear": "npx rimraf --glob \"src/**/*.@(js|d.ts)\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "ckeditor5-package-tools start",
-    "test": "ckeditor5-package-tools test",
+    "test": "vitest",
+    "test:debug": "vitest --inspect-brk --no-file-parallelism --browser.headless=false",
     "prepare": "husky && npm run build:dist",
     "prepublishOnly": "npm run ts:build && ckeditor5-package-tools export-package-as-javascript",
     "postpublish": "npm run ts:clear && ckeditor5-package-tools export-package-as-typescript",
-    "translations:collect": "ckeditor5-package-tools translations:collect",
-    "translations:download": "ckeditor5-package-tools translations:download",
-    "translations:upload": "ckeditor5-package-tools translations:upload"
+    "translations:synchronize": "ckeditor5-package-tools translations:synchronize",
+    "translations:validate": "ckeditor5-package-tools translations:synchronize --validate-only"
   },
   "peerDependencies": {
     "ckeditor5": ">=42.0.0 || ^0.0.0-nightly"
@@ -64,16 +65,20 @@
     "@antfu/eslint-config": "^3.12.0",
     "@ckeditor/ckeditor5-dev-build-tools": "^43.0.1",
     "@ckeditor/ckeditor5-inspector": ">=4.1.0",
-    "@ckeditor/ckeditor5-package-tools": "^2.1.1",
-    "@types/chai": "^4.3.20",
-    "@types/mocha": "^9.1.1",
+    "@ckeditor/ckeditor5-package-tools": "^3.0.0",
     "@types/node": "^20.17.10",
+    "@vitest/browser": "^2.1.8",
+    "@vitest/coverage-istanbul": "^2.1.8",
     "chalk": "^4.1.2",
     "ckeditor5": "latest",
     "eslint": "^9.17.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
-    "typescript": "5.0.4"
+    "rimraf": "^6.0.1",
+    "typescript": "5.0.4",
+    "vite-plugin-svgo": "~1.4.1",
+    "vitest": "^2.1.8",
+    "webdriverio": "^9.4.2"
   },
   "lint-staged": {
     "*": "eslint --fix"
