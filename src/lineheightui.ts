@@ -1,5 +1,5 @@
-import { Collection, Plugin } from 'ckeditor5'
-import { type ListDropdownItemDefinition, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5'
+import { Collection, Plugin, ViewModel, addListToDropdown, createDropdown } from 'ckeditor5'
+import type { ListDropdownItemDefinition } from 'ckeditor5'
 import type LineHeightCommand from './lineheightcommand.js'
 
 import type { LineHeightOption } from './lineheightconfig.js'

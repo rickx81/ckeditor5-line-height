@@ -1,4 +1,5 @@
-import { type Editor, Plugin } from 'ckeditor5'
+import { Plugin } from 'ckeditor5'
+import type { Editor } from 'ckeditor5'
 
 import LineHeightCommand from './lineheightcommand.js'
 import { buildDefinition, LINE_HEIGHT, normalizeOptions } from './utils.js'

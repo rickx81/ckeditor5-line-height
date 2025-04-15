@@ -2,7 +2,7 @@
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
   "version": "44.0.0",
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@10.8.0",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
   "license": "MIT",
@@ -62,23 +62,23 @@
     "ckeditor5": ">=42.0.0 || ^0.0.0-nightly"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.12.0",
+    "@antfu/eslint-config": "^4.12.0",
     "@ckeditor/ckeditor5-dev-build-tools": "^43.0.1",
     "@ckeditor/ckeditor5-inspector": "^4.1.0",
-    "@ckeditor/ckeditor5-package-tools": "^3.0.0",
-    "@types/node": "^20.17.10",
-    "@vitest/browser": "^2.1.8",
-    "@vitest/coverage-istanbul": "^2.1.8",
-    "chalk": "^4.1.2",
+    "@ckeditor/ckeditor5-package-tools": "^3.0.1",
+    "@types/node": "^20.17.30",
+    "@vitest/browser": "^2.1.9",
+    "@vitest/coverage-istanbul": "^2.1.9",
+    "chalk": "^5.4.1",
     "ckeditor5": "latest",
-    "eslint": "^9.17.0",
+    "eslint": "^9.24.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
+    "lint-staged": "^15.5.1",
     "rimraf": "^6.0.1",
     "typescript": "5.0.4",
-    "vite-plugin-svgo": "~1.4.1",
-    "vitest": "^2.1.8",
-    "webdriverio": "^9.4.2"
+    "vite-plugin-svgo": "~1.6.2",
+    "vitest": "^2.1.9",
+    "webdriverio": "^9.12.5"
   },
   "lint-staged": {
     "*": "eslint --fix"
