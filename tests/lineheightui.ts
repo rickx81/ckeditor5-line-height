@@ -1,5 +1,6 @@
+import { describe, expect, it, beforeEach, afterEach } from 'vitest'
+
 import type { ButtonView, DropdownView, ListItemView } from 'ckeditor5'
-import { expect } from 'chai'
 import { ClassicEditor } from 'ckeditor5'
 
 import type { LineHeightCommand } from '../src/index.js'
@@ -15,6 +16,7 @@ describe('LineHeightUI', () => {
     document.body.appendChild(domElement)
 
     editor = await ClassicEditor.create(domElement, {
+      licenseKey: 'GPL',
       plugins: [LineHeightEditing, LineHeightUI],
       lineHeight: {
         options: [

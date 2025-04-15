@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import { describe, expect, it, beforeEach, afterEach } from 'vitest'
 import { ClassicEditor } from 'ckeditor5'
 
 import { LineHeight, LineHeightEditing, LineHeightUI } from '../src/index.js'
@@ -20,6 +20,7 @@ describe('LineHeight', () => {
       document.body.appendChild(domElement)
 
       editor = await ClassicEditor.create(domElement, {
+        licenseKey: 'GPL',
         plugins: [
           LineHeight,
         ],

@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import { describe, expect, it, beforeEach, afterEach } from 'vitest'
 import { ClassicEditor, Command } from 'ckeditor5'
 
 import LineHeightCommand from '../src/lineheightcommand.js'
@@ -12,7 +12,9 @@ describe('LineHeightCommand', () => {
     domElement = document.createElement('div')
     document.body.appendChild(domElement)
 
-    editor = await ClassicEditor.create(domElement)
+    editor = await ClassicEditor.create(domElement, {
+      licenseKey: 'GPL',
+    })
 
     command = new LineHeightCommand(editor)
     editor.commands.add('lineHeight', command)

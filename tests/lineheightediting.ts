@@ -1,5 +1,5 @@
 import type { Model } from 'ckeditor5'
-import { expect } from 'chai'
+import { describe, expect, it, beforeEach, afterEach } from 'vitest'
 import { ClassicEditor, Paragraph, _getModelData, _setModelData } from 'ckeditor5'
 
 import { LineHeightEditing } from '../src/index.js'
@@ -13,6 +13,7 @@ describe('LineHeight', () => {
     document.body.appendChild(domElement)
 
     editor = await ClassicEditor.create(domElement, {
+      licenseKey: 'GPL',
       plugins: [LineHeightEditing, Paragraph],
     })
   })
@@ -40,6 +41,7 @@ describe('LineHeight', () => {
       document.body.appendChild(domElement)
 
       editor = await ClassicEditor.create(domElement, {
+        licenseKey: 'GPL',
         plugins: [LineHeightEditing, Paragraph],
         lineHeight: {
           options: [
