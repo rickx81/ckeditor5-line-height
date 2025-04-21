@@ -56,6 +56,7 @@ ClassicEditor
           model: '48px',
         },
       ],
+      supportAllValues: true,
     },
     toolbar: [
       /* ..., */

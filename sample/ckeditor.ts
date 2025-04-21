@@ -88,6 +88,7 @@ ClassicEditor
       'mediaEmbed',
       'codeBlock',
     ],
+    licenseKey: 'GPL',
     language: 'zh-CN',
     translations: [
       coreTranslations,
@@ -105,6 +106,7 @@ ClassicEditor
           title: 'Custom Title',
         },
       ],
+      supportAllValues: true,
     },
     image: {
       toolbar: [

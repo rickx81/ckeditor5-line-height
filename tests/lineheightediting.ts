@@ -27,6 +27,70 @@ describe('LineHeight', () => {
     describe('default value', () => {
       it('should be set', () => {
         expect(editor.config.get('lineHeight.options')).to.deep.equal(['default', 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2, 2.5])
+
+        expect(editor.config.get('lineHeight.supportAllValues')).to.equal(false)
+      })
+    })
+
+    describe('supportAllValues = true', () => {
+      let domElement: HTMLElement,
+        editor: ClassicEditor,
+        model: Model
+
+      beforeEach(async () => {
+        domElement = document.createElement('div')
+        document.body.appendChild(domElement)
+
+        editor = await ClassicEditor.create(domElement, {
+          licenseKey: 'GPL',
+          plugins: [LineHeightEditing, Paragraph],
+          lineHeight: {
+            options: ['default'],
+            supportAllValues: true,
+          },
+        })
+        model = editor.model
+      })
+
+      afterEach(() => {
+        domElement.remove()
+        return editor.destroy()
+      })
+
+      describe('editing pipeline conversion', () => {
+        it('should convert unknown lineHeight attribute values', () => {
+          _setModelData(model, '<paragraph lineHeight="foo-bar">foo</paragraph>')
+
+          expect(editor.getData()).to.equal('<p style="line-height:foo-bar;">foo</p>')
+        })
+
+        it('should convert defined lineHeight attribute values', () => {
+          _setModelData(model, '<paragraph lineHeight="24pt">foo</paragraph>')
+
+          expect(editor.getData()).to.equal('<p style="line-height:24pt;">foo</p>')
+        })
+      })
+
+      describe('data pipeline conversions', () => {
+        it('should convert from an element with defined style when with other styles', () => {
+          const data = '<p style="line-height:24pt;font-size: 18px">foo</p>'
+
+          editor.setData(data)
+
+          expect(_getModelData(model)).to.equal('<paragraph lineHeight="24pt">[]foo</paragraph>')
+
+          expect(editor.getData()).to.equal('<p style="line-height:24pt;">foo</p>')
+        })
+
+        it('should convert from a nested element', () => {
+          const data = '<p style="line-height:24pt">f<span><span><span><span>o</span></span></span></span>o</p>'
+
+          editor.setData(data)
+
+          expect(_getModelData(model)).to.equal('<paragraph lineHeight="24pt">[]foo</paragraph>')
+
+          expect(editor.getData()).to.equal('<p style="line-height:24pt;">foo</p>')
+        })
       })
     })
   })

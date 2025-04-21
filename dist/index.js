@@ -117,12 +117,14 @@ class LineHeightEditing extends Plugin {
                 1.6,
                 2,
                 2.5
-            ]
+            ],
+            supportAllValues: false
         });
     }
     init() {
         const editor = this.editor;
         const schema = editor.model.schema;
+        const supportAllValues = editor.config.get('lineHeight.supportAllValues');
         const options = normalizeOptions(editor.config.get('lineHeight.options')).filter((option)=>option.model);
         // Allow LineHeight attribute on all blocks.
         schema.extend('$block', {
@@ -133,9 +135,40 @@ class LineHeightEditing extends Plugin {
         });
         // Define view to model conversion.
         const definition = buildDefinition(LINE_HEIGHT, options);
-        editor.conversion.attributeToAttribute(definition);
+        if (supportAllValues) {
+            this._prepareAnyValueConverters();
+        } else {
+            editor.conversion.attributeToAttribute(definition);
+        }
         // Add LineHeight Command.
         editor.commands.add(LINE_HEIGHT, new LineHeightCommand(editor));
+    }
+    /**
+   * These converters enable keeping any value found as `style="line-height: *"` as a value of an attribute on a text even
+   * if it is not defined in the plugin configuration.
+   */ _prepareAnyValueConverters() {
+        const editor = this.editor;
+        editor.conversion.for('downcast').attributeToAttribute({
+            model: LINE_HEIGHT,
+            view: (attributeValue)=>({
+                    key: 'style',
+                    value: {
+                        'line-height': attributeValue
+                    }
+                })
+        });
+        editor.conversion.for('upcast').elementToAttribute({
+            model: {
+                key: LINE_HEIGHT,
+                value: (viewElement)=>viewElement.getStyle('line-height')
+            },
+            view: {
+                name: 'p',
+                styles: {
+                    'line-height': /.*/
+                }
+            }
+        });
     }
 }
 
