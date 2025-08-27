@@ -41,13 +41,16 @@ function buildDefinition(modelAttributeKey, options) {
         view: {}
     };
     for (const option of options){
-        definition.model.values.push(option.model);
-        definition.view[option.model] = {
-            key: 'style',
-            value: {
-                'line-height': option.model
-            }
-        };
+        if (option.view) {
+            definition.model.values.push(option.model);
+            definition.view[option.model] = option.view;
+        } else {
+            definition.model.values.push(option.model);
+            definition.view[option.model] = {
+                key: 'style',
+                value: `line-height:${option.model};`
+            };
+        }
     }
     return definition;
 }
@@ -68,8 +71,8 @@ function buildDefinition(modelAttributeKey, options) {
     }
     refresh() {
         const model = this.editor.model;
-        const document = model.document;
-        const firstBlock = first(document.selection.getSelectedBlocks());
+        const selection = model.document.selection;
+        const firstBlock = first(selection.getSelectedBlocks());
         // As first check whether to enable or disable the command as the value will always be false if the command cannot be enabled.
         this.isEnabled = !!firstBlock && this._canSetLineHeight(firstBlock);
         this.value = this.isEnabled && firstBlock.hasAttribute(LINE_HEIGHT) ? firstBlock.getAttribute(LINE_HEIGHT) : 'default';
@@ -77,10 +80,10 @@ function buildDefinition(modelAttributeKey, options) {
     execute(options = {}) {
         const editor = this.editor;
         const model = editor.model;
-        const document = model.document;
+        const selection = model.document.selection;
         const value = options.value;
         model.change((writer)=>{
-            const blocks = Array.from(document.selection.getSelectedBlocks()).filter((block)=>this._canSetLineHeight(block));
+            const blocks = Array.from(selection.getSelectedBlocks()).filter((block)=>this._canSetLineHeight(block));
             const currentLineHeight = blocks[0].getAttribute(LINE_HEIGHT);
             const removeLineHeight = currentLineHeight === value || !value;
             if (removeLineHeight) removeLineHeightFromSelection(blocks, writer);
@@ -124,8 +127,8 @@ class LineHeightEditing extends Plugin {
     init() {
         const editor = this.editor;
         const schema = editor.model.schema;
-        const supportAllValues = editor.config.get('lineHeight.supportAllValues');
-        const options = normalizeOptions(editor.config.get('lineHeight.options')).filter((option)=>option.model);
+        // Add LineHeight Command.
+        editor.commands.add(LINE_HEIGHT, new LineHeightCommand(editor));
         // Allow LineHeight attribute on all blocks.
         schema.extend('$block', {
             allowAttributes: LINE_HEIGHT
@@ -133,15 +136,33 @@ class LineHeightEditing extends Plugin {
         editor.model.schema.setAttributeProperties(LINE_HEIGHT, {
             isFormatting: true
         });
-        // Define view to model conversion.
-        const definition = buildDefinition(LINE_HEIGHT, options);
+        const supportAllValues = editor.config.get('lineHeight.supportAllValues');
         if (supportAllValues) {
             this._prepareAnyValueConverters();
         } else {
-            editor.conversion.attributeToAttribute(definition);
+            this._preparePredefinedConverters();
         }
-        // Add LineHeight Command.
-        editor.commands.add(LINE_HEIGHT, new LineHeightCommand(editor));
+    }
+    _preparePredefinedConverters() {
+        const editor = this.editor;
+        const options = normalizeOptions(editor.config.get('lineHeight.options')).filter((option)=>option.model);
+        // Define view to model conversion.
+        const definition = buildDefinition(LINE_HEIGHT, options);
+        editor.conversion.attributeToAttribute(definition);
+        editor.conversion.for('upcast').attributeToAttribute({
+            view: {
+                styles: {
+                    'line-height': /[\s\S]+/
+                }
+            },
+            model: {
+                key: 'lineHeight',
+                value: (viewElement)=>{
+                    const value = viewElement.getStyle('line-height');
+                    return value && definition.model.values.includes(value) ? value : null;
+                }
+            }
+        });
     }
     /**
    * These converters enable keeping any value found as `style="line-height: *"` as a value of an attribute on a text even
@@ -157,13 +178,12 @@ class LineHeightEditing extends Plugin {
                     }
                 })
         });
-        editor.conversion.for('upcast').elementToAttribute({
+        editor.conversion.for('upcast').attributeToAttribute({
             model: {
                 key: LINE_HEIGHT,
                 value: (viewElement)=>viewElement.getStyle('line-height')
             },
             view: {
-                name: 'p',
                 styles: {
                     'line-height': /.*/
                 }

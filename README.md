@@ -55,6 +55,22 @@ ClassicEditor
           title: 'Custom Title',
           model: '48px',
         },
+        {
+          title: 'Double',
+          model: 'double',
+          view: {
+            key: 'style',
+            value: { 'line-height': '200%' },
+          },
+        },
+        {
+          title: 'Triple',
+          model: 'triple',
+          view: {
+            key: 'class',
+            value: ['line-height-triple', 'triple'],
+          },
+        },
       ],
       supportAllValues: true,
     },
@@ -69,6 +85,22 @@ ClassicEditor
   })
   .then(/* ... */)
   .catch(/* ... */)
+```
+
+## Common API
+You can change the line height of the current selection by executing the command with a desired value:
+
+```js
+// For numerical values:
+editor.execute('lineHeight', { value: 2 })
+
+// For named presets:
+editor.execute('lineHeight', { value: 'double' })
+```
+
+Passing an empty value will remove any config.lineHeight set:
+```js
+editor.execute('lineHeight')
 ```
 
 ## License

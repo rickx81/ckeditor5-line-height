@@ -1,3 +1,5 @@
+import type { DowncastAttributeDescriptor } from 'ckeditor5'
+
 export interface LineHeightConfig {
   /**
    * The default value is:
@@ -12,11 +14,11 @@ export interface LineHeightConfig {
    *
    * ```ts
    * const lineHeightConfig = {
-   *   options: ['default', '10px', 2, '150%', '8em', { title: 'Custom Title', model: '48px' }]
+   *   options: ['default', '10px', 2, '150%', '8em']
    * };
    * ```
    *
-   * Also, you can define a label in the dropdown for numerical values:
+   * Also, you can define a label in the dropdown for each line-height option and customize how it will be rendered in the view:
    *
    * ```ts
    * const lineHeightConfig = {
@@ -30,25 +32,47 @@ export interface LineHeightConfig {
    *        title: 'Custom Title',
    *        model: '48px'
    *     },
+   *     {
+   *       title: 'Double',
+   *       model: 'double',
+   *       view: {
+   *         key: 'style',
+   *         value: { 'line-height': '200%' },
+   *       },
+   *     },
+   *     {
+   *       title: 'Triple',
+   *       model: 'triple',
+   *       view: {
+   *         key: 'class',
+   *         value: ['line-height-triple', 'triple'],
+   *       },
+   *     },
    *   ]
    * };
    * ```
    *
-   * Line height can be applied using the command API. To do that, use the `'lineHeight'` command and pass the desired line-height as a `value`.
-   * For example, the following code will apply the `lineHeight` attribute with the **tiny** value to the current selection:
+   * Line height can be applied using the command API.
+   * To do that, use the `'lineHeight'` command and pass the desired line-height as a `value`.
    *
    * ```ts
-   * editor.execute('lineHeight', { value: 1.5 });
+   * // For numerical values:
+   * editor.execute('lineHeight', { value: 2 })
+   * // For named presets:
+   * editor.execute('lineHeight', { value: 'double' })
    * ```
    *
    * Executing the `lineHeight` command without value will remove the `lineHeight` attribute from the current selection.
+   *
+   * ```ts
+   * editor.execute('lineHeight')
+   * ```
    */
   options?: (string | number | LineHeightOption)[]
 
   /**
-   * By default the plugin removes any `line-height` value that does not match the plugin's configuration.
-   * It means that if you paste content with line heights that the editor does not understand, the `line-height` attribute
-   * will be removed and the content will be displayed with the default height.
+   * By default, all `line-height` values that are not specified in the `config.lineHeight.options` are stripped.
+   * You can enable support for all line heights by using the `config.lineHeight.supportAllValues` option.
    *
    * You can preserve pasted line height values by switching the `supportAllValues` option to `true`:
    *
@@ -74,4 +98,9 @@ export interface LineHeightOption {
    * The attribute's unique value in the model.
    */
   model?: string
+
+  /**
+   * View element configuration.
+   */
+  view?: DowncastAttributeDescriptor
 }

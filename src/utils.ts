@@ -1,4 +1,4 @@
-import type { AttributeDescriptor } from 'ckeditor5'
+import type { DowncastAttributeDescriptor } from 'ckeditor5'
 
 import type { LineHeightOption } from './lineheightconfig.js'
 
@@ -43,10 +43,7 @@ export function normalizeOptions(configuredOptions: (string | number | LineHeigh
     .filter(option => !!option)
 }
 
-export function buildDefinition(
-  modelAttributeKey: string,
-  options: LineHeightOption[],
-): LineHeightConverterDefinition {
+export function buildDefinition(modelAttributeKey: string, options: LineHeightOption[]): LineHeightConverterDefinition {
   const definition: LineHeightConverterDefinition = {
     model: {
       key: modelAttributeKey,
@@ -56,12 +53,16 @@ export function buildDefinition(
   }
 
   for (const option of options) {
-    definition.model.values.push(option.model!)
-    definition.view[option.model!] = {
-      key: 'style',
-      value: {
-        'line-height': option.model!,
-      },
+    if (option.view) {
+      definition.model.values.push(option.model!)
+      definition.view[option.model!] = option.view
+    }
+    else {
+      definition.model.values.push(option.model!)
+      definition.view[option.model!] = {
+        key: 'style',
+        value: `line-height:${option.model!};`,
+      }
     }
   }
 
@@ -80,5 +81,5 @@ export interface LineHeightConverterDefinition {
     key: string
     values: Array<string>
   }
-  view: Record<string, AttributeDescriptor>
+  view: Record<string, DowncastAttributeDescriptor>
 }

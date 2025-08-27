@@ -73,7 +73,7 @@ describe('LineHeight', () => {
 
       describe('data pipeline conversions', () => {
         it('should convert from an element with defined style when with other styles', () => {
-          const data = '<p style="line-height:24pt;font-size: 18px">foo</p>'
+          const data = '<p style="line-height:24pt;font-size:18px">foo</p>'
 
           editor.setData(data)
 
@@ -115,8 +115,24 @@ describe('LineHeight', () => {
             '150%',
             '8em',
             {
-              model: '48px',
               title: 'Huge',
+              model: '48px',
+            },
+            {
+              title: 'Double',
+              model: 'double',
+              view: {
+                key: 'style',
+                value: { 'line-height': '200%' },
+              },
+            },
+            {
+              title: 'Triple',
+              model: 'triple',
+              view: {
+                key: 'class',
+                value: ['line-height-triple', 'triple'],
+              },
             },
           ],
         },
@@ -153,6 +169,18 @@ describe('LineHeight', () => {
 
         expect(editor.getData()).to.equal('<p style="line-height:8em;">foo</p>')
       })
+
+      it('should pass style lineHeight to data', () => {
+        _setModelData(model, '<paragraph lineHeight="double">[]foo</paragraph>')
+
+        expect(editor.getData()).to.equal('<p style="line-height:200%;">foo</p>')
+      })
+
+      it('should pass class lineHeight to data', () => {
+        _setModelData(model, '<paragraph lineHeight="triple">[]foo</paragraph>')
+
+        expect(editor.getData()).to.equal('<p class="line-height-triple triple">foo</p>')
+      })
     })
 
     describe('data pipeline conversions', () => {
@@ -170,6 +198,8 @@ describe('LineHeight', () => {
           + '<p style="line-height:2;">foo</p>'
           + '<p style="line-height:150%;">foo</p>'
           + '<p style="line-height:8em;">foo</p>'
+          + '<p style="line-height:200%;">foo</p>'
+          + '<p class="line-height-triple triple">foo</p>'
 
         editor.setData(data)
 
@@ -177,7 +207,9 @@ describe('LineHeight', () => {
           '<paragraph lineHeight="10px">[]foo</paragraph>'
           + '<paragraph lineHeight="2">foo</paragraph>'
           + '<paragraph lineHeight="150%">foo</paragraph>'
-          + '<paragraph lineHeight="8em">foo</paragraph>',
+          + '<paragraph lineHeight="8em">foo</paragraph>'
+          + '<paragraph lineHeight="double">foo</paragraph>'
+          + '<paragraph lineHeight="triple">foo</paragraph>',
         )
 
         expect(editor.getData()).to.equal(data)

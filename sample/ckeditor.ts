@@ -102,8 +102,24 @@ ClassicEditor
         '150%',
         '8em',
         {
-          model: '48px',
           title: 'Custom Title',
+          model: '48px',
+        },
+        {
+          title: 'Double',
+          model: 'double',
+          view: {
+            key: 'style',
+            value: { 'line-height': '200%' },
+          },
+        },
+        {
+          title: 'Triple',
+          model: 'triple',
+          view: {
+            key: 'class',
+            value: ['line-height-triple', 'triple'],
+          },
         },
       ],
       supportAllValues: true,
