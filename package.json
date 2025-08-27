@@ -1,7 +1,7 @@
 {
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
-  "version": "45.0.0-rc.1",
+  "version": "46.0.0",
   "packageManager": "pnpm@10.8.0",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
@@ -59,12 +59,12 @@
     "translations:validate": "ckeditor5-package-tools translations:synchronize --validate-only"
   },
   "peerDependencies": {
-    "ckeditor5": ">=42.0.0 || ^0.0.0-nightly"
+    "ckeditor5": ">=46.0.0 || ^0.0.0-nightly"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.19.0",
     "@ckeditor/ckeditor5-dev-build-tools": "43.1.0",
-    "@ckeditor/ckeditor5-inspector": ">=5.0.0",
+    "@ckeditor/ckeditor5-inspector": "^5.0.0",
     "@ckeditor/ckeditor5-package-tools": "^4.0.2",
     "@types/node": "^20.19.11",
     "@vitest/browser": "^2.1.9",
