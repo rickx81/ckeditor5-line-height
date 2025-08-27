@@ -62,23 +62,23 @@
     "ckeditor5": ">=42.0.0 || ^0.0.0-nightly"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.12.0",
-    "@ckeditor/ckeditor5-dev-build-tools": "^43.0.1",
-    "@ckeditor/ckeditor5-inspector": "^4.1.0",
-    "@ckeditor/ckeditor5-package-tools": "^3.0.1",
-    "@types/node": "^20.17.30",
+    "@antfu/eslint-config": "^4.19.0",
+    "@ckeditor/ckeditor5-dev-build-tools": "43.1.0",
+    "@ckeditor/ckeditor5-inspector": ">=5.0.0",
+    "@ckeditor/ckeditor5-package-tools": "^4.0.2",
+    "@types/node": "^20.19.11",
     "@vitest/browser": "^2.1.9",
     "@vitest/coverage-istanbul": "^2.1.9",
-    "chalk": "^5.4.1",
+    "chalk": "^5.6.0",
     "ckeditor5": "latest",
-    "eslint": "^9.24.0",
+    "eslint": "^9.34.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^15.5.2",
     "rimraf": "^6.0.1",
     "typescript": "5.0.4",
     "vite-plugin-svgo": "~1.6.2",
     "vitest": "^2.1.9",
-    "webdriverio": "^9.12.5"
+    "webdriverio": "^9.19.2"
   },
   "lint-staged": {
     "*": "eslint --fix"
