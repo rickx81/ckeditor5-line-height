@@ -31,8 +31,7 @@ export default class LineHeightCommand extends Command {
   }
 
   public override execute(options: { value?: string } = {}): void {
-    const editor = this.editor
-    const model = editor.model
+    const model = this.editor.model
     const selection = model.document.selection
 
     const value = options.value

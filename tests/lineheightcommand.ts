@@ -1,5 +1,5 @@
-import { describe, expect, it, beforeEach, afterEach } from 'vitest'
 import { ClassicEditor, Command } from 'ckeditor5'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 import LineHeightCommand from '../src/lineheightcommand.js'
 

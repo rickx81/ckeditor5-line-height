@@ -1,10 +1,10 @@
 import type { Model } from 'ckeditor5'
-import { describe, expect, it, beforeEach, afterEach } from 'vitest'
-import { ClassicEditor, Paragraph, _getModelData, _setModelData } from 'ckeditor5'
+import { _getModelData, _setModelData, ClassicEditor, Paragraph } from 'ckeditor5'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 import { LineHeightEditing } from '../src/index.js'
 
-describe('LineHeight', () => {
+describe('LineHeightEditing', () => {
   let domElement: HTMLElement,
     editor: ClassicEditor
 
@@ -21,6 +21,14 @@ describe('LineHeight', () => {
   afterEach(() => {
     domElement.remove()
     return editor.destroy()
+  })
+
+  it('should have pluginName', () => {
+    expect(LineHeightEditing.pluginName).to.equal('LineHeightEditing')
+  })
+
+  it('allows for lineHeight in $blocks', () => {
+    expect(editor.model.schema.checkAttribute(['$root', '$block'], 'lineHeight')).to.equal(true)
   })
 
   describe('config', () => {
@@ -112,7 +120,7 @@ describe('LineHeight', () => {
             'default',
             '10px',
             2,
-            '150%',
+            '160%',
             '8em',
             {
               title: 'Huge',
@@ -159,9 +167,9 @@ describe('LineHeight', () => {
       })
 
       it('should pass percentage lineHeight to data', () => {
-        _setModelData(model, '<paragraph lineHeight="150%">[]foo</paragraph>')
+        _setModelData(model, '<paragraph lineHeight="160%">[]foo</paragraph>')
 
-        expect(editor.getData()).to.equal('<p style="line-height:150%;">foo</p>')
+        expect(editor.getData()).to.equal('<p style="line-height:160%;">foo</p>')
       })
 
       it('should pass em lineHeight to data', () => {
@@ -196,7 +204,7 @@ describe('LineHeight', () => {
       it('should convert from complex definition', () => {
         const data = '<p style="line-height:10px;">foo</p>'
           + '<p style="line-height:2;">foo</p>'
-          + '<p style="line-height:150%;">foo</p>'
+          + '<p style="line-height:160%;">foo</p>'
           + '<p style="line-height:8em;">foo</p>'
           + '<p style="line-height:200%;">foo</p>'
           + '<p class="line-height-triple triple">foo</p>'
@@ -206,7 +214,7 @@ describe('LineHeight', () => {
         expect(_getModelData(model)).to.equal(
           '<paragraph lineHeight="10px">[]foo</paragraph>'
           + '<paragraph lineHeight="2">foo</paragraph>'
-          + '<paragraph lineHeight="150%">foo</paragraph>'
+          + '<paragraph lineHeight="160%">foo</paragraph>'
           + '<paragraph lineHeight="8em">foo</paragraph>'
           + '<paragraph lineHeight="double">foo</paragraph>'
           + '<paragraph lineHeight="triple">foo</paragraph>',

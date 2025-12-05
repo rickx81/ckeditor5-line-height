@@ -7,16 +7,21 @@ import type { LineHeightOption } from './lineheightconfig.js'
  */
 export const LINE_HEIGHT = 'lineHeight'
 
+const CSS_VARIABLE_NAME = '--ck-content-line-height'
+export function getDefaultLineHeight() {
+  return getComputedStyle(document.body).getPropertyValue(CSS_VARIABLE_NAME)
+}
+
 function getOptionDefinition(option: string | number | LineHeightOption): LineHeightOption {
   // Check whether passed option is a full item definition provided by user in configuration.
   if (typeof option === 'object' && isFullItemDefinition(option))
     return option
 
   // 'Default' lineHeight. It will be used to remove the lineHeight attribute.
-  if (option === 'default') {
+  if (option === 'default' || option === 'Default') {
     return {
-      model: undefined,
       title: 'Default',
+      model: undefined,
     }
   }
 
@@ -43,10 +48,10 @@ export function normalizeOptions(configuredOptions: (string | number | LineHeigh
     .filter(option => !!option)
 }
 
-export function buildDefinition(modelAttributeKey: string, options: LineHeightOption[]): LineHeightConverterDefinition {
+export function buildDefinition(options: LineHeightOption[]): LineHeightConverterDefinition {
   const definition: LineHeightConverterDefinition = {
     model: {
-      key: modelAttributeKey,
+      key: LINE_HEIGHT,
       values: [],
     },
     view: {},

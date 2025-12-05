@@ -26,9 +26,9 @@ import {
 
 import coreTranslations from 'ckeditor5/translations/zh-cn.js'
 
-import LineHeight from '../src/lineheight.js'
 // eslint-disable-next-line antfu/no-import-dist
 import lineHeightTranslations from '../dist/translations/zh-cn.js'
+import LineHeight from '../src/lineheight.js'
 
 import 'ckeditor5/ckeditor5.css'
 

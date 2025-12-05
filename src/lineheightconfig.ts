@@ -1,6 +1,7 @@
 import type { DowncastAttributeDescriptor } from 'ckeditor5'
 
 export interface LineHeightConfig {
+
   /**
    * The default value is:
    *

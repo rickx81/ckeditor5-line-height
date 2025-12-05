@@ -1,5 +1,5 @@
-import { describe, expect, it, beforeEach, afterEach } from 'vitest'
 import { ClassicEditor } from 'ckeditor5'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 import { LineHeight, LineHeightEditing, LineHeightUI } from '../src/index.js'
 
@@ -35,14 +35,17 @@ describe('LineHeight', () => {
       return editor.destroy()
     })
 
-    it('should load LineHeight', () => {
-      const myPlugin = editor.plugins.get('LineHeight')
-
-      expect(myPlugin).to.be.an.instanceof(LineHeight)
+    it('should be named', () => {
+      expect(LineHeight.pluginName).to.equal('LineHeight')
     })
 
-    it('should add an icon to the toolbar', () => {
+    it('should load LineHeight', () => {
+      expect(editor.plugins.get('LineHeight')).to.be.an.instanceof(LineHeight)
+    })
+
+    it('should register UI components', () => {
       expect(editor.ui.componentFactory.has('lineHeight')).to.equal(true)
+      expect(editor.ui.componentFactory.has('menuBar:lineHeight')).to.equal(true)
     })
   })
 })

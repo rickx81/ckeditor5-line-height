@@ -1,10 +1,10 @@
-import { describe, expect, it, beforeEach, afterEach } from 'vitest'
-
-import type { ButtonView, DropdownView, ListItemView } from 'ckeditor5'
-import { ClassicEditor } from 'ckeditor5'
+import type { ButtonView, DropdownView, ListItemView, MenuBarMenuView } from 'ckeditor5'
 
 import type { LineHeightCommand } from '../src/index.js'
-import { LineHeightEditing, LineHeightUI, icons } from '../src/index.js'
+import { ClassicEditor } from 'ckeditor5'
+
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
+import { icons, LineHeightEditing, LineHeightUI } from '../src/index.js'
 
 describe('LineHeightUI', () => {
   let domElement: HTMLElement,
@@ -32,6 +32,10 @@ describe('LineHeightUI', () => {
   afterEach(() => {
     domElement.remove()
     return editor.destroy()
+  })
+
+  it('should have pluginName', () => {
+    expect(LineHeightUI.pluginName).to.equal('LineHeightUI')
   })
 
   describe('toolbar dropdown', () => {
@@ -83,6 +87,31 @@ describe('LineHeightUI', () => {
         command.isEnabled = true
         expect(dropdown.buttonView.isEnabled).to.be.equal(true)
       })
+    })
+  })
+
+  describe('menu bar', () => {
+    let subMenu: MenuBarMenuView
+
+    beforeEach(() => {
+      command = editor.commands.get('lineHeight')!
+      subMenu = editor.ui.componentFactory.create('menuBar:lineHeight') as MenuBarMenuView
+    })
+
+    it('button has the base properties', () => {
+      const button = subMenu.buttonView
+
+      expect(button).to.have.property('label', 'Line Height')
+      expect(button).to.have.property('icon', icons.lineHeight)
+    })
+
+    it('button has binding to isEnabled', () => {
+      command.isEnabled = false
+
+      expect(subMenu.buttonView.isEnabled).to.equal(false)
+
+      command.isEnabled = true
+      expect(subMenu.buttonView.isEnabled).to.equal(true)
     })
   })
 })

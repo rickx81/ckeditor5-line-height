@@ -1,5 +1,5 @@
-import { Plugin } from 'ckeditor5'
 import type { Editor, ViewElement } from 'ckeditor5'
+import { Plugin } from 'ckeditor5'
 
 import LineHeightCommand from './lineheightcommand.js'
 import { buildDefinition, LINE_HEIGHT, normalizeOptions } from './utils.js'
@@ -41,13 +41,38 @@ export default class LineHeightEditing extends Plugin {
     }
   }
 
+  /**
+   * These converters enable keeping any value found as `style="line-height: *"` as a value of an attribute on a text even
+   * if it is not defined in the plugin configuration.
+   */
+  private _prepareAnyValueConverters(): void {
+    const editor = this.editor
+
+    editor.conversion.for('downcast').attributeToAttribute({
+      model: {
+        key: LINE_HEIGHT,
+      },
+      view: (attributeValue) => {
+        return { key: 'style', value: { 'line-height': String(attributeValue) } }
+      },
+    })
+
+    editor.conversion.for('upcast').attributeToAttribute({
+      model: {
+        key: LINE_HEIGHT,
+        value: (viewElement: ViewElement) => viewElement.getStyle('line-height'),
+      },
+      view: { styles: { 'line-height': /.*/ } },
+    })
+  }
+
   private _preparePredefinedConverters(): void {
     const editor = this.editor
 
     const options = normalizeOptions(editor.config.get('lineHeight.options')!)
       .filter(option => option.model)
     // Define view to model conversion.
-    const definition = buildDefinition(LINE_HEIGHT, options)
+    const definition = buildDefinition(options)
 
     editor.conversion.attributeToAttribute(definition)
 
@@ -61,32 +86,6 @@ export default class LineHeightEditing extends Plugin {
           return (value && definition.model.values.includes(value)) ? value : null
         },
       },
-    })
-  }
-
-  /**
-   * These converters enable keeping any value found as `style="line-height: *"` as a value of an attribute on a text even
-   * if it is not defined in the plugin configuration.
-   */
-  private _prepareAnyValueConverters(): void {
-    const editor = this.editor
-
-    editor.conversion.for('downcast').attributeToAttribute({
-      model: LINE_HEIGHT,
-      view: attributeValue => ({
-        key: 'style',
-        value: {
-          'line-height': attributeValue as string,
-        },
-      }),
-    })
-
-    editor.conversion.for('upcast').attributeToAttribute({
-      model: {
-        key: LINE_HEIGHT,
-        value: (viewElement: ViewElement) => viewElement.getStyle('line-height'),
-      },
-      view: { styles: { 'line-height': /.*/ } },
     })
   }
 }
