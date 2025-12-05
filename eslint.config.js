@@ -2,8 +2,7 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu({
   rules: {
-    'perfectionist/sort-named-imports': 'off',
-    'perfectionist/sort-imports': 'off',
+    'pnpm/json-enforce-catalog': 'off',
   },
   ignores: [
     // Ignore the entire `dist/` (the NIM build).

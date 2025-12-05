@@ -2,7 +2,7 @@
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
   "version": "46.0.0",
-  "packageManager": "pnpm@10.8.0",
+  "packageManager": "pnpm@10.24.0",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
   "license": "MIT",
@@ -52,9 +52,9 @@
     "start": "ckeditor5-package-tools start",
     "test": "vitest",
     "test:debug": "vitest --inspect-brk --no-file-parallelism --browser.headless=false",
-    "prepare": "husky && npm run build:dist",
-    "prepublishOnly": "npm run ts:build && ckeditor5-package-tools export-package-as-javascript",
-    "postpublish": "npm run ts:clear && ckeditor5-package-tools export-package-as-typescript",
+    "prepare": "husky && pnpm run build:dist",
+    "prepublishOnly": "pnpm run ts:build && ckeditor5-package-tools export-package-as-javascript",
+    "postpublish": "pnpm run ts:clear && ckeditor5-package-tools export-package-as-typescript",
     "translations:synchronize": "ckeditor5-package-tools translations:synchronize",
     "translations:validate": "ckeditor5-package-tools translations:synchronize --validate-only"
   },
@@ -62,25 +62,35 @@
     "ckeditor5": ">=46.0.0 || ^0.0.0-nightly"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
+    "@antfu/eslint-config": "latest",
+    "@ckeditor/ckeditor5-core": "latest",
     "@ckeditor/ckeditor5-dev-build-tools": "43.1.0",
     "@ckeditor/ckeditor5-inspector": "^5.0.0",
-    "@ckeditor/ckeditor5-package-tools": "^4.0.2",
-    "@types/node": "^20.19.11",
-    "@vitest/browser": "^2.1.9",
-    "@vitest/coverage-istanbul": "^2.1.9",
-    "chalk": "^5.6.0",
+    "@ckeditor/ckeditor5-package-tools": "^5.0.1",
+    "@types/node": "^22.19.1",
+    "@vitest/browser-webdriverio": "^4.0.15",
+    "@vitest/coverage-istanbul": "^4.0.15",
+    "chalk": "^5.6.2",
     "ckeditor5": "latest",
-    "eslint": "^9.34.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.39.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "rimraf": "^6.0.1",
+    "postcss-loader": "^8.2.0",
+    "raw-loader": "^4.0.2",
+    "rimraf": "^6.1.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
     "typescript": "5.0.4",
-    "vite-plugin-svgo": "~1.6.2",
-    "vitest": "^2.1.9",
-    "webdriverio": "^9.19.2"
+    "upath": "^2.0.1",
+    "vite-plugin-svgo": "^2.0.0",
+    "vitest": "^4.0.15",
+    "webdriverio": "^9.21.0"
+  },
+  "overrides": {
+    "sugarss": "^5.0.1"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "eslint . --fix"
   }
 }
