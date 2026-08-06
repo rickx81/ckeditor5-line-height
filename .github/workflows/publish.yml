@@ -13,20 +13,24 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v4
+
       - name: Set node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .node-version
+          cache: pnpm
           registry-url: https://registry.npmjs.org/
 
       - run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - uses: pnpm/action-setup@v4
-
       - name: Install Dependencies
-        run: pnpm i
+        run: pnpm i --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
 
       - name: Publish to NPM
         uses: JS-DevTools/npm-publish@v3

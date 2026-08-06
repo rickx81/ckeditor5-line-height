@@ -11,21 +11,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v4
+
       - name: Set node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .node-version
+          cache: pnpm
           registry-url: https://registry.npmjs.org/
 
-      - uses: pnpm/action-setup@v4
-
       - name: Install Dependencies
-        run: pnpm i
+        run: pnpm i --frozen-lockfile
 
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 120
+          chrome-version: stable
+
+      - name: Lint
+        run: pnpm lint
 
       - name: Test
         run: pnpm test
