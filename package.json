@@ -1,7 +1,7 @@
 {
   "name": "@rickx/ckeditor5-line-height",
   "type": "module",
-  "version": "47.0.0",
+  "version": "48.0.0",
   "packageManager": "pnpm@10.34.5",
   "description": "LineHeight plugin for CKEditor5",
   "author": "rickx81",
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/rickx81/ckeditor5-line-height",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rickx81/ckeditor5-line-height.git"
+    "url": "git+https://github.com/rickx81/ckeditor5-line-height.git"
   },
   "bugs": "https://github.com/rickx81/ckeditor5-line-height/issues",
   "keywords": [
