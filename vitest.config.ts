@@ -7,6 +7,10 @@ export default defineConfig({
     svg(),
   ],
   test: {
+    dir: import.meta.dirname,
+    include: [
+      'tests/**/*.[jt]s',
+    ],
     browser: {
       enabled: true,
       instances: [
@@ -16,12 +20,10 @@ export default defineConfig({
       headless: true,
       ui: false,
     },
-    include: [
-      'tests/**/*.[jt]s',
-    ],
     globals: true,
     watch: false,
     coverage: {
+      allowExternal: true,
       thresholds: {
         lines: 100,
         functions: 100,
@@ -30,7 +32,7 @@ export default defineConfig({
       },
       provider: 'istanbul',
       include: [
-        'src',
+        'src/**/*.[jt]s',
       ],
     },
   },

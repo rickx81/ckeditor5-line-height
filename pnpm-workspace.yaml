@@ -1,13 +1,11 @@
-catalogMode: prefer
-cleanupUnusedCatalogs: true
-
 shellEmulator: true
-trustPolicy: no-downgrade
 
-onlyBuiltDependencies:
-  - '@swc/core'
-  - edgedriver
-  - esbuild
-  - geckodriver
-  - husky
-  - msw
+# eslint-disable-next-line pnpm/yaml-enforce-settings
+trustPolicy: off
+
+allowBuilds:
+  '@swc/core': true
+  edgedriver: false
+  esbuild: true
+  geckodriver: false
+  husky: true

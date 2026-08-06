@@ -1,10 +1,22 @@
-build/
-coverage/
-dist/
-node_modules/
-tmp/
-sample/ckeditor.dist.js
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Ignore compiled TypeScript files.
-src/**/*.js
-src/**/*.d.ts
+node_modules
+dist
+coverage
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

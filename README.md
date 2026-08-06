@@ -2,9 +2,6 @@
 ============================
 
 This package was created by the [ckeditor5-package-generator](https://www.npmjs.com/package/ckeditor5-package-generator) package.
-# ckeditor5-line-height
-
-The line height plugin for ckeditor5.
 
 ## Quick start
 
